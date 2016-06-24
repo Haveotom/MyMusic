@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/mymusic_margin_twenty"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_ranklist_icon_rl"
+        android:layout_width="@dimen/width_height_ninty"
+        android:layout_height="@dimen/width_height_ninty"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/mymusic_padding_ten"
+        android:layout_marginRight="@dimen/mymusic_padding_ten"
+        android:layout_marginTop="@dimen/mymusic_padding_ten">
+
+        <ImageView
+            android:id="@+id/item_ranklist_icon_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/icon" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/activity_margin_five"
+            android:background="@drawable/ranklist_play_selection"
+            android:clickable="true" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/item_ranklist_title_tv"
+        style="@style/text_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/item_ranklist_icon_rl"
+        android:layout_toRightOf="@id/item_ranklist_icon_rl"
+        android:text="新歌榜" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_ranklist_title_tv"
+        android:layout_marginTop="@dimen/mymusic_padding_ten"
+        android:layout_toRightOf="@id/item_ranklist_icon_rl">
+
+        <TextView
+            android:id="@+id/one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1  "
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="@dimen/textsize_twelve"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/one"
+            android:layout_marginTop="@dimen/activity_margin_five"
+            android:text="2  "
+            android:textColor="@color/orange"
+            android:textSize="@dimen/textsize_twelve"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/two"
+            android:layout_marginTop="@dimen/activity_margin_five"
+            android:text="3  "
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textsize_twelve"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_ranklist_first_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/one"
+            android:layout_toRightOf="@id/one"
+            android:text="1"
+            android:textSize="@dimen/textsize_twelve" />
+
+        <TextView
+            android:id="@+id/item_ranklist_second_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/two"
+            android:layout_toRightOf="@id/two"
+            android:text="2"
+            android:textSize="@dimen/textsize_twelve" />
+
+        <TextView
+            android:id="@+id/item_ranklist_third_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/three"
+            android:layout_toRightOf="@id/three"
+            android:text="3"
+            android:textSize="@dimen/textsize_twelve" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/btn_more_left_arrow_nor" />
+
+
+</RelativeLayout>

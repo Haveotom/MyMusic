@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:background="@color/blue"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/activity_main_tablayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fillViewport="false"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextAppearance="@style/activity_title_text"
+            app:tabTextColor="@color/littleBlue"></android.support.design.widget.TabLayout>
+        <!--如上将下划线设置成透明的-->
+        <!--最后一条是设置它的style 字体大小颜色等-->
+        <RelativeLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/activity_main_search"
+                android:layout_width="@dimen/activity_search_width_twenty_five"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/acitivty_margin"
+                android:clickable="true"
+                android:src="@drawable/title_search_selection" />
+
+            <ImageView
+                android:id="@+id/activity_main_singer"
+                android:layout_width="@dimen/activity_search_width_twenty_five"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/acitivty_margin"
+                android:layout_toRightOf="@id/activity_main_search"
+                android:src="@mipmap/bt_sceneplay_singer2" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_margin_five"
+                android:layout_toRightOf="@id/activity_main_singer"
+                android:src="@mipmap/bt_titlebar_setting_normal" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_player_foot"
+        android:background="@android:color/darker_gray" />
+
+
+</LinearLayout>

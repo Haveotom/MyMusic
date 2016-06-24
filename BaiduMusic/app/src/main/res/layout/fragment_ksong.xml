@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/kson_search_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_thirty_dp"
+        android:layout_margin="@dimen/margin_eight"
+        android:background="@drawable/linearlayout_frame_line_import"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_five"
+            android:src="@mipmap/ic_k_k" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_five"
+            android:text="@string/ksong_sousuo"
+            android:textColor="@color/black_normal_least" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/kson_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:background="@mipmap/icon_error"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_eighty" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mymusic_padding_ten"
+                android:orientation="horizontal">
+
+                <LinearLayout style="@style/ksong_linearlayout">
+
+                    <ImageView
+                        style="@style/ksong_icon"
+                        android:src="@mipmap/img_k_ktv" />
+
+                    <TextView
+                        style="@style/ksong_textview"
+                        android:text="KTV热歌榜" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/ksong_linearlayout">
+
+                    <ImageView
+                        style="@style/ksong_icon"
+                        android:src="@mipmap/img_k_chinese" />
+
+                    <TextView
+                        style="@style/ksong_textview"
+                        android:text="华语金曲" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ksong_linearlayout">
+
+                    <ImageView
+                        style="@style/ksong_icon"
+                        android:src="@mipmap/img_k_occident" />
+
+                    <TextView
+                        style="@style/ksong_textview"
+                        android:text="欧美经典" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mymusic_padding_ten"
+                android:orientation="horizontal">
+
+                <LinearLayout style="@style/ksong_linearlayout">
+
+                    <ImageView
+                        style="@style/ksong_icon"
+                        android:src="@mipmap/img_k_man" />
+
+                    <TextView
+                        style="@style/ksong_textview"
+                        android:text="男歌手" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/ksong_linearlayout">
+
+                    <ImageView
+                        style="@style/ksong_icon"
+                        android:src="@mipmap/img_k_woman" />
+
+                    <TextView
+                        style="@style/ksong_textview"
+                        android:text="女歌手" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ksong_linearlayout">
+
+                    <ImageView
+                        style="@style/ksong_icon"
+                        android:src="@mipmap/img_k_band" />
+
+                    <TextView
+                        style="@style/ksong_textview"
+                        android:text="乐队组合" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/line_all"
+                android:layout_marginBottom="@dimen/mymusic_padding_ten"
+                android:layout_marginTop="@dimen/activity_margin_five" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/mymusic_padding_ten"
+                        android:src="@mipmap/blue_shubang2" />
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/ksong_allsing" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.jingjiang.baidumusic.widget.NoScrollListView
+                android:id="@+id/kson_allsing_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/activity_margin_five"
+                android:scrollbars="none">
+            </com.jingjiang.baidumusic.widget.NoScrollListView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

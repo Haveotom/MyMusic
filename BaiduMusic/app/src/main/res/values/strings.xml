@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BaiduMusic</string>
+    <string name="mymusic_listen">随便听听</string>
+    <string name="mymusic_bendi">本地音乐</string>
+    <string name="mymusic_myksong">我的 K 歌</string>
+    <string name="mymusic_download">下载管理</string>
+    <string name="mymusic_recent">最近播放</string>
+    <string name="mymusic_songlist">自建歌单</string>
+    <string name="mymusic_ilikesong">我喜欢的单曲</string>
+    <string name="mymusic_newsonglist">新建歌单</string>
+    <string name="mymusic_shoucang">收藏歌单</string>
+    <string name="mymusic_guanli">管理</string>
+    <string name="music_radio_person">私人频道</string>
+    <string name="music_radio_redheart">红心频道</string>
+    <string name="music_radio_recommendradio">推荐电台</string>
+    <string name="music_mv_quanbu">全部</string>
+    <string name="ksong_sousuo">搜索 K 歌伴奏</string>
+    <string name="ksong_allsing">大家都在唱</string>
+    <string name="live_text">热门直播</string>
+    <string name="live_more">更多</string>
+</resources>

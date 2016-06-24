@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/mymusic_bacground" />
+
+                <LinearLayout
+                    android:id="@+id/fragment_mymusic_listen_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/mymusic_margin_twenty"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/mymusic_padding_ten">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:clickable="true"
+                        android:src="@drawable/mymusic_listen_selection" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mymusic_listen"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/textsize_twelve" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_fifty">
+
+                <ImageView
+                    android:id="@+id/mymusic_bendi_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:src="@mipmap/ic_mymusic_local_normal" />
+
+                <TextView
+                    style="@style/text_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:layout_toRightOf="@id/mymusic_bendi_iv"
+                    android:text="@string/mymusic_bendi" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/acitivty_margin"
+                    android:src="@mipmap/bt_notificationbar_play" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_null_left" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_fifty">
+
+                <ImageView
+                    android:id="@+id/mymusic_play_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:src="@mipmap/ic_mymusic_play_normal" />
+
+                <TextView
+                    style="@style/text_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:layout_toRightOf="@id/mymusic_play_iv"
+                    android:text="@string/mymusic_recent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/acitivty_margin"
+                    android:src="@mipmap/btn_more_left_arrow_nor" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_null_left" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_fifty">
+
+                <ImageView
+                    android:id="@+id/mymusic_download_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:src="@mipmap/ic_mymusic_download_normal" />
+
+                <TextView
+                    style="@style/text_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:layout_toRightOf="@id/mymusic_download_iv"
+                    android:text="@string/mymusic_download" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/acitivty_margin"
+                    android:src="@mipmap/btn_more_left_arrow_nor" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_null_left" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_fifty">
+
+                <ImageView
+                    android:id="@+id/mymusic_myksong_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:src="@mipmap/ic_mymusic_ktv_normal" />
+
+                <TextView
+                    style="@style/text_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:layout_toRightOf="@id/mymusic_myksong_iv"
+                    android:text="@string/mymusic_myksong" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/acitivty_margin"
+                    android:src="@mipmap/btn_more_left_arrow_nor" />
+            </RelativeLayout>
+
+            <View style="@style/line_all" />
+
+            <TextView
+                style="@style/text_normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/acitivty_margin"
+                android:gravity="center_vertical"
+                android:text="@string/mymusic_songlist" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_fifty">
+
+                <ImageView
+                    android:id="@+id/mymusic_ilike_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:src="@mipmap/ic_mymusic_like" />
+
+                <TextView
+                    android:id="@+id/mymusic_singlesong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:layout_marginTop="@dimen/mymusic_padding_ten"
+                    android:layout_toRightOf="@id/mymusic_ilike_iv"
+                    android:text="@string/mymusic_ilikesong"
+                    android:textColor="@color/black_normal_most" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mymusic_singlesong"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:layout_toRightOf="@id/mymusic_ilike_iv"
+                    android:text="0首"
+                    android:textColor="@color/black_normal_least" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/acitivty_margin"
+                    android:src="@mipmap/btn_more_left_arrow_nor" />
+            </RelativeLayout>
+
+            <View style="@style/line_null_left_more" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_fifty">
+
+                <ImageView
+                    android:id="@+id/mymusic_new_songlist_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:src="@mipmap/ic_mymusic_add_nor" />
+
+                <TextView
+                    style="@style/text_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:layout_marginTop="@dimen/mymusic_padding_ten"
+                    android:layout_toRightOf="@id/mymusic_new_songlist_iv"
+                    android:text="@string/mymusic_newsonglist" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_null_left_more" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/acitivty_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/mymusic_shoucang" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/acitivty_margin"
+                    android:gravity="right"
+                    android:text="@string/mymusic_guanli"
+                    android:textColor="@color/black_normal_least"
+                    android:textSize="@dimen/textsize_twelve" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:textSize="30sp"
+                android:text="收藏"
+                android:gravity="center"/>
+
+            <com.jingjiang.baidumusic.widget.NoScrollListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></com.jingjiang.baidumusic.widget.NoScrollListView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

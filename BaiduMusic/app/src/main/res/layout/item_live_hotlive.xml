@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/mymusic_margin_twenty"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mymusic_padding_ten"
+        >
+        <ImageView
+            android:id="@+id/item_live_picture_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/zzz"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_live_play_shade" />
+
+        <ImageView
+            android:id="@+id/item_live_header_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/mymusic_padding_ten"
+            android:layout_marginLeft="@dimen/mymusic_padding_ten"
+            android:src="@mipmap/img_live_play_people" />
+
+        <TextView
+            android:id="@+id/item_live_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_eight"
+            android:layout_marginLeft="@dimen/height_thirty_dp"
+            android:text="number"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_ten_sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:clickable="true"
+            android:layout_margin="@dimen/margin_eight"
+            android:src="@drawable/live_play_selection" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/item_live_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin_fifteen"
+        android:layout_marginTop="@dimen/activity_margin_five"
+        android:text="name"
+        android:textSize="@dimen/textsize_twelve"
+        android:layout_marginLeft="@dimen/mymusic_padding_ten"
+        android:textColor="@color/black_normal_most" />
+
+
+</LinearLayout>

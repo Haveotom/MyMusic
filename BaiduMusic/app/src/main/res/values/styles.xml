@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="activity_title_text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="musiclibrary_title_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black_normal</item>
+    </style>
+
+    <!--横线-->
+    <style name="line_all">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.1dp</item>
+        <item name="android:background">@color/gray</item>
+    </style>
+    <!--一段横线,左边为空-->
+    <style name="line_null_left">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.1dp</item>
+        <item name="android:background">@color/gray</item>
+        <item name="android:layout_marginLeft">@dimen/margin_fifty</item>
+        <item name="android:layout_marginRight">@dimen/acitivty_margin</item>
+    </style>
+
+    <style name="line_null_left_more">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.1dp</item>
+        <item name="android:background">@color/gray</item>
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:layout_marginRight">@dimen/acitivty_margin</item>
+    </style>
+    <!--字体的style-->
+    <style name="text_normal">
+        <item name="android:textSize">@dimen/textsize_fifteen</item>
+        <item name="android:textColor">@color/black_normal_most</item>
+    </style>
+
+    <!--k歌中的重复-->
+
+
+    <style name="ksong_linearlayout">
+        <item name="android:layout_width">@dimen/zero</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/activity_margin_fifteen</item>
+        <item name="android:layout_marginRight">@dimen/activity_margin_fifteen</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--其中的字体-->
+    <style name="ksong_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/black_normal_most</item>
+        <item name="android:layout_marginTop">@dimen/activity_margin_five</item>
+    </style>
+    <!--其中的图片-->
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/width_hundred"
+
+    <style name="ksong_icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/height_seventy</item>
+    </style>
+
+</resources>

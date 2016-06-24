@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--<color name="blue">#79b3fc</color>-->
+    <color name="blue">#00bbff</color>
+    <color name="littleBlue">#99ffff</color>
+    <color name="black_most">#000000</color>
+    <color name="black_normal_most">#333333</color>
+    <color name="black_normal">#666666</color>
+    <color name="black_normal_least">#999999</color>
+    <color name="black_least">#cccccc</color>
+    <color name="gray">#dddddd</color>
+    <color name="gray_least">#eeeeee</color>
+    <color name="white">#ffffff</color>
+    <color name="orange">#ee7700</color>
+    <color name="yellow">#ffcc00</color>
+    <color name="radiopage_red">#e23544</color>
+    <color name="radiopage_blue">#00aafa</color>
+
+</resources>
