@@ -9,7 +9,7 @@ import com.jingjiang.baidumusic.adapter.LiveAdapter;
 import com.jingjiang.baidumusic.base.BaseFragment;
 import com.jingjiang.baidumusic.bean.LiveHotData;
 import com.jingjiang.baidumusic.widget.MyGridView;
-import com.jingjiang.baidumusic.widget.Url;
+import com.jingjiang.baidumusic.widget.UrlTool;
 import com.jingjiang.baidumusic.widget.VolleySingle;
 
 /**
@@ -30,13 +30,13 @@ public class LiveFragment extends BaseFragment {
         gridView = bindView(R.id.live_gridview);
         adapter = new LiveAdapter(getContext());
         scrollView = bindView(R.id.live_scrollView);
-        scrollView.scrollTo(0,0);
+        scrollView.scrollTo(0, 0);
 
     }
 
     @Override
     protected void initData() {
-        VolleySingle.getInstance()._addRequest(Url.LIVE_HOT,
+        VolleySingle.getInstance()._addRequest(UrlTool.LIVE_HOT,
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
@@ -46,10 +46,19 @@ public class LiveFragment extends BaseFragment {
                     @Override
                     public void onResponse(LiveHotData response) {
                         adapter.setData(response);
+                        scrollView.scrollTo(0, 0);
 
                     }
                 }, LiveHotData.class);
         gridView.setAdapter(adapter);
+        scrollView.scrollTo(0, 0);
 
+
+    }
+
+    public void setScroll() {
+        if (scrollView != null) {
+            scrollView.scrollTo(0, 0);
+        }
     }
 }

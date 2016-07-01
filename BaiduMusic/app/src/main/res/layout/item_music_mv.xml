@@ -10,7 +10,7 @@
         android:id="@+id/item_mv_icon_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/icon" />
+        android:src="@mipmap/default_mv" />
 
     <TextView
         android:id="@+id/item_mv_title_tv"

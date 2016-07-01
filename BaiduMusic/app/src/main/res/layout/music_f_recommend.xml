@@ -1,7 +1,779 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light">
+    android:orientation="vertical">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false">
+                <!--clipChilden 可以让轮播图的左右页显示-->
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/music_recommend_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_hundred_twenty"
+                    android:layout_marginLeft="@dimen/margin_forty"
+                    android:layout_marginRight="@dimen/margin_forty"
+                    android:layout_marginTop="@dimen/margin_three_dp"
+                    android:clipChildren="false" />
+
+                <LinearLayout
+                    android:id="@+id/music_recommend_point_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mymusic_padding_ten"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"></LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/line_all"
+                android:layout_marginTop="@dimen/mymusic_padding_ten" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mymusic_padding_ten"
+                android:orientation="vertical">
+
+                <com.jingjiang.baidumusic.widget.MyGridView
+                    android:id="@+id/music_recommend_songclassify_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/mymusic_padding_ten"
+                    android:layout_marginRight="@dimen/mymusic_padding_ten"
+                    android:gravity="center"
+                    android:listSelector="#00000000"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/line_all"
+                android:layout_marginTop="@dimen/mymusic_padding_ten" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/music_recommend_songmenu_recommend_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                        android:src="@mipmap/blue_shubang2" />
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_five"
+                        android:text="歌单推荐" />
+
+                    <View
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" />
+
+                    <TextView
+                        android:id="@+id/music_recommend_songmenu_recommend_more_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/activity_margin_fifteen"
+                        android:gravity="right"
+                        android:text="@string/more" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.jingjiang.baidumusic.widget.MyGridView
+                    android:id="@+id/music_recommend_songmenu_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/activity_margin_five"
+                    android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                    android:layout_marginRight="@dimen/activity_margin_fifteen"
+                    android:layout_marginTop="@dimen/zero"
+                    android:fadeScrollbars="false"
+                    android:horizontalSpacing="@dimen/activity_margin_fifteen"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+
+            <View
+                style="@style/line_all"
+                android:layout_marginTop="@dimen/activity_margin_five" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/music_recommend_newcd_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                        android:src="@mipmap/blue_shubang2" />
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_five"
+                        android:text="新碟上架" />
+
+                    <View
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" />
+
+                    <TextView
+                        android:id="@+id/music_recommend_newcd_more_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/activity_margin_fifteen"
+                        android:gravity="right"
+                        android:text="@string/more" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.jingjiang.baidumusic.widget.MyGridView
+                    android:id="@+id/music_recommend_mewcd_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/activity_margin_five"
+                    android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                    android:layout_marginRight="@dimen/activity_margin_fifteen"
+                    android:layout_marginTop="@dimen/zero"
+                    android:fadeScrollbars="false"
+                    android:horizontalSpacing="@dimen/activity_margin_fifteen"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+
+            <View
+                style="@style/line_all"
+                android:layout_marginTop="@dimen/mymusic_padding_ten" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/music_recommend_hotsell_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                        android:src="@mipmap/blue_shubang2" />
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_five"
+                        android:text="热销专辑" />
+
+                    <View
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" />
+
+                    <TextView
+                        android:id="@+id/music_recommend_hotsell_more_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/activity_margin_fifteen"
+                        android:gravity="right"
+                        android:text="@string/more" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.jingjiang.baidumusic.widget.MyGridView
+                    android:id="@+id/music_recommend_hotsell_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/activity_margin_five"
+                    android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                    android:layout_marginRight="@dimen/activity_margin_fifteen"
+                    android:layout_marginTop="@dimen/zero"
+                    android:fadeScrollbars="false"
+                    android:horizontalSpacing="@dimen/activity_margin_fifteen"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+
+            <View
+                style="@style/line_all"
+                android:layout_marginTop="@dimen/mymusic_padding_ten" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/music_recommend_video_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                        android:src="@mipmap/blue_shubang2" />
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_five"
+                        android:text="场景电台" />
+
+                    <View
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" />
+
+                    <TextView
+                        android:id="@+id/music_recommend_video_more_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/activity_margin_fifteen"
+                        android:gravity="right"
+                        android:text="@string/more" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mymusic_padding_ten"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="@dimen/height_sixty"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/video_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/img_recommend_lebo_orange" />
+
+                    <ImageView
+                        android:id="@+id/recommend_video_one_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+                    <TextView
+                        android:id="@+id/recommend_video_one_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/video_one"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/activity_margin_five"
+                        android:gravity="center_horizontal"
+                        android:text="一个人"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/textsize_twelve" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="@dimen/height_sixty"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/video_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/img_recommend_lebo_green" />
+
+                    <ImageView
+
+                        android:id="@+id/recommend_video_two_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+                    <TextView
+                        android:id="@+id/recommend_video_two_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/video_two"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/activity_margin_five"
+                        android:gravity="center_horizontal"
+                        android:text="一个人"
+                        android:textColor="@color/green_less"
+                        android:textSize="@dimen/textsize_twelve" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="@dimen/height_sixty"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/video_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/img_recommend_lebo_cyan" />
+
+                    <ImageView
+
+                        android:id="@+id/recommend_video_three_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+                    <TextView
+                        android:id="@+id/recommend_video_three_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/video_three"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/activity_margin_five"
+                        android:gravity="center_horizontal"
+                        android:text="一个人"
+                        android:textColor="@color/green_more"
+                        android:textSize="@dimen/textsize_twelve" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="@dimen/height_sixty"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/video_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/img_recommend_lebo_blue" />
+
+                    <ImageView
+
+                        android:id="@+id/recommend_video_four_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+                    <TextView
+                        android:id="@+id/recommend_video_four_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/video_four"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/activity_margin_five"
+                        android:gravity="center_horizontal"
+                        android:text="一个人"
+                        android:textColor="@color/radiopage_blue"
+                        android:textSize="@dimen/textsize_twelve" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/line_all"
+                android:layout_marginTop="@dimen/mymusic_padding_ten" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/music_recommend_today_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                        android:src="@mipmap/blue_shubang2" />
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_five"
+                        android:text="今日推荐歌曲" />
+
+                    <View
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" />
+
+                    <TextView
+                        android:id="@+id/music_recommend_today_more_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/activity_margin_fifteen"
+                        android:gravity="right"
+                        android:text="@string/more" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.jingjiang.baidumusic.widget.NoScrollListView
+                    android:id="@+id/music_recommend_today_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_twelve_dp"
+                    android:layout_marginRight="@dimen/mymusic_padding_ten"></com.jingjiang.baidumusic.widget.NoScrollListView>
+
+            </LinearLayout>
+
+            <View
+                style="@style/line_all"
+                android:layout_marginTop="@dimen/mymusic_padding_ten" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/music_recommend_t_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                        android:src="@mipmap/blue_shubang2" />
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_five"
+                        android:text="T榜 - 全球原创音乐现金榜" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.jingjiang.baidumusic.widget.MyGridView
+                    android:id="@+id/music_recommend_t_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/activity_margin_five"
+                    android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                    android:layout_marginRight="@dimen/activity_margin_fifteen"
+                    android:layout_marginTop="@dimen/zero"
+                    android:fadeScrollbars="false"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/activity_margin_fifteen"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+
+            <View
+                style="@style/line_all"
+                android:layout_marginTop="@dimen/mymusic_padding_ten" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/music_recommend_hotmv_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                        android:src="@mipmap/blue_shubang2" />
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_five"
+                        android:text="最热MV推荐" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.jingjiang.baidumusic.widget.MyGridView
+                    android:id="@+id/music_recommend_hotmv_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/activity_margin_five"
+                    android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                    android:layout_marginRight="@dimen/activity_margin_fifteen"
+                    android:layout_marginTop="@dimen/zero"
+                    android:fadeScrollbars="false"
+                    android:horizontalSpacing="@dimen/activity_margin_fifteen"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+
+            <View
+                style="@style/line_all"
+                android:layout_marginTop="@dimen/mymusic_padding_ten" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/music_recommend_happy_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                        android:src="@mipmap/blue_shubang2" />
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_five"
+                        android:text="乐播节目" />
+
+                    <View
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" />
+
+                    <TextView
+                        android:id="@+id/music_recommend_happy_more_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/activity_margin_fifteen"
+                        android:gravity="right"
+                        android:text="@string/more" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.jingjiang.baidumusic.widget.MyGridView
+                    android:id="@+id/music_recommend_happy_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/activity_margin_five"
+                    android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                    android:layout_marginRight="@dimen/activity_margin_fifteen"
+                    android:layout_marginTop="@dimen/zero"
+                    android:fadeScrollbars="false"
+                    android:horizontalSpacing="@dimen/activity_margin_fifteen"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+
+            <View
+                style="@style/line_all"
+                android:layout_marginTop="@dimen/mymusic_padding_ten" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/music_recommend_special_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                        android:src="@mipmap/blue_shubang2" />
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_five"
+                        android:text="专栏" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.jingjiang.baidumusic.widget.NoScrollListView
+                    android:id="@+id/music_recommend_special_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_twelve_dp"
+                    android:layout_marginRight="@dimen/mymusic_padding_ten" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/line_all"
+                android:layout_marginTop="@dimen/mymusic_padding_ten" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>

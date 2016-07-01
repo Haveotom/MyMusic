@@ -16,6 +16,8 @@
     <color name="white">#ffffff</color>
     <color name="orange">#ee7700</color>
     <color name="yellow">#ffcc00</color>
+    <color name="green_less">#7cbd00</color>
+    <color name="green_more">#00c3bb</color>
     <color name="radiopage_red">#e23544</color>
     <color name="radiopage_blue">#00aafa</color>
 

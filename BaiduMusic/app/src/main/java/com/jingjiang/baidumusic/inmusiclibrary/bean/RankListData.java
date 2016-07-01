@@ -30,6 +30,8 @@ public class RankListData {
 
     private List<ContentBean> content;
 
+
+
     public int getError_code() {
         return error_code;
     }

@@ -58,8 +58,8 @@ public class MVAdapter extends BaseAdapter {
         }
         holder.titleTv.setText(mvData.getResult().getMv_list().get(position).getTitle());
         holder.nameTv.setText(mvData.getResult().getMv_list().get(position).getArtist());
-        Picasso.with(context).load(mvData.getResult().getMv_list().get(position).getThumbnail2()).resize(320,180)
-                .error(R.mipmap.icon).into(holder.iconIv);
+        Picasso.with(context).load(mvData.getResult().getMv_list().get(position).getThumbnail2())
+                .error(R.mipmap.default_mv).resize(320,180).into(holder.iconIv);
         return convertView;
     }
 

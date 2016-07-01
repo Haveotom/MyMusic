@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_search_choice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_margin_five"
+        android:background="@drawable/linearlayout_frame"
+        android:paddingBottom="@dimen/activity_margin_five"
+        android:paddingLeft="@dimen/margin_eight"
+        android:paddingRight="@dimen/margin_eight"
+        android:paddingTop="@dimen/activity_margin_five"
+        android:text="太阳的后裔"
+        android:maxLines="1"
+        android:textColor="@color/black_normal"
+        android:textSize="@dimen/textsize_twelve" />
+
+</LinearLayout>

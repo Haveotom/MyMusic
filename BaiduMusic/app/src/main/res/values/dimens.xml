@@ -31,6 +31,14 @@
     <dimen name="textsize_twelve">12sp</dimen>
     <dimen name="textsize_ten_sp">10sp</dimen>
     <dimen name="margin_twohundred_fifty">250dp</dimen>
+    <dimen name="ksong_resume_play_ninty_two">92dp</dimen>
+    <dimen name="height_fifty_five">55dp</dimen>
+    <dimen name="drawer_width_full">385dp</dimen>
+    <dimen name="height_hundred_twenty">120dp</dimen>
+    <dimen name="margin_forty">40dp</dimen>
+    <dimen name="textsize_thirteen">13sp</dimen>
+    <dimen name="twohundred_eighty">280dp</dimen>
+    <dimen name="two_hundred">200dp</dimen>
 
 
 </resources>

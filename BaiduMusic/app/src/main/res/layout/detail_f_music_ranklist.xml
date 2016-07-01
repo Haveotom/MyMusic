@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/two_hundred">
+
+                <ImageView
+                    android:id="@+id/detail_music_ranklist_icon_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@mipmap/bb" />
+
+                <TextView
+                    android:id="@+id/detail_music_ranklist_date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/margin_twelve_dp"
+                    android:text="更新日期"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/detail_music_ranklist_play_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/detail_music_ranklist_date_tv"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_margin_fifteen"
+                    android:clickable="true"
+                    android:src="@drawable/ranklist_play_selection" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_fifty">
+
+                <TextView
+                    android:id="@+id/detail_music_ranklist_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_twelve_dp"
+                    android:text="几首歌" />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/detail_music_ranklist_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:background="#e0000000"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/detail_music_ranklist_return_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:src="@mipmap/fanhui" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/textsize_fifteen"
+            android:text="name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_fifteen"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="最新"
-                android:textColor="@color/blue"/>
+                android:textColor="@color/blue" />
 
             <View
                 android:layout_width="0.5dp"
@@ -69,15 +69,24 @@
 
     </RelativeLayout>
 
-    <GridView
-        android:id="@+id/music_mv_gridview"
+    <com.jingjiang.baidumusic.widget.PullToRefreshView
+        android:id="@+id/music_f_mv_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:numColumns="2"
-        android:paddingLeft="@dimen/mymusic_padding_ten"
-        android:paddingRight="@dimen/mymusic_padding_ten"
-        android:scrollbars="none"
-        android:stretchMode="columnWidth"></GridView>
+        android:orientation="vertical">
 
+        <GridView
+            android:id="@+id/music_mv_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:numColumns="2"
+            android:paddingLeft="@dimen/mymusic_padding_ten"
+            android:verticalSpacing="@dimen/zero"
+            android:horizontalSpacing="@dimen/zero"
+            android:paddingRight="@dimen/mymusic_padding_ten"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"></GridView>
+
+    </com.jingjiang.baidumusic.widget.PullToRefreshView>
 </LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/item_music_ranklist_detail_rl"
+            android:layout_width="@dimen/margin_fifty"
+            android:layout_height="@dimen/margin_fifty">
+
+            <ImageView
+                android:id="@+id/item_music_ranklist_detail_icon_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_margin_five"
+                android:src="@mipmap/icon" />
+
+            <ImageView
+                android:id="@+id/item_recommend_today_play_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/bt_sceneplay_play"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_margin_five"
+            android:layout_toRightOf="@id/item_music_ranklist_detail_rl"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_recommend_today_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textColor="@color/black_normal_most"
+                android:textSize="@dimen/textsize_twelve" />
+
+            <TextView
+                android:id="@+id/item_recommend_today_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textColor="@color/black_normal_least"
+                android:textSize="@dimen/textsize_twelve" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/item_recommend_today_more_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/recommend_more" />
+
+        <ImageView
+            android:id="@+id/item_recommend_today_right_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_margin_five"
+            android:src="@mipmap/right1"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

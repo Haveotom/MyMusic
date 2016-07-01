@@ -18,4 +18,8 @@
     <string name="ksong_allsing">大家都在唱</string>
     <string name="live_text">热门直播</string>
     <string name="live_more">更多</string>
+    <string name="search_fragment_content">歌曲 , 歌手 , 专辑 , 歌词 , 伴奏</string>
+    <string name="fragment_search_hot">热门搜索</string>
+    <string name="more"><![CDATA[更多 >]]></string>
+    <string name="refresh_header_arrow">下拉刷新</string>
 </resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_eight"
+    android:layout_marginTop="@dimen/margin_eight">
+
+    <ImageView
+        android:id="@+id/item_individual_use_icon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_eight"
+        android:paddingLeft="@dimen/mymusic_padding_ten"
+        android:src="@mipmap/icon" />
+
+    <LinearLayout
+
+        android:layout_width="@dimen/margin_twohundred_fifty"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mymusic_padding_ten"
+        android:layout_alignTop="@id/item_individual_use_icon_iv"
+        android:layout_toRightOf="@id/item_individual_use_icon_iv"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_individual_use_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textColor="@color/black_normal_most" />
+
+        <TextView
+            android:id="@+id/item_individual_use_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_three_dp"
+            android:maxLines="3"
+            android:text="jieshao"
+            android:textColor="@color/black_normal_least"
+            android:textSize="@dimen/textsize_ten_sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/mymusic_padding_ten"
+        android:clickable="true"
+        android:src="@drawable/activity_individual_use_download" />
+
+
+</RelativeLayout>

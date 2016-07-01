@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pull_to_refresh_header"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/margin_forty"
+    android:gravity="center"
+    android:paddingBottom="@dimen/mymusic_padding_ten"
+    android:paddingTop="@dimen/mymusic_padding_ten">
+
+    <ProgressBar
+        android:id="@+id/pull_to_load_progress"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/height_thirty_dp"
+        android:layout_marginRight="@dimen/mymusic_margin_twenty"
+        android:layout_marginTop="@dimen/mymusic_padding_ten"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/pull_to_load_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/height_thirty_dp"
+        android:layout_marginRight="@dimen/mymusic_margin_twenty"
+        android:gravity="center"
+        android:src="@mipmap/ic_pulltorefresh_arrow_up"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/pull_to_load_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="上拉加载更多"
+        android:textSize="16sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+
+        android:textStyle="bold" />
+
+</RelativeLayout>

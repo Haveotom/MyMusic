@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/item_recommend_newcd_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_error" />
+
+        <ImageView
+            android:id="@+id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/item_recommend_newcd_icon_iv"
+            android:layout_marginBottom="@dimen/margin_eight"
+            android:layout_marginLeft="@dimen/mymusic_padding_ten"
+            android:src="@mipmap/ic_lebo_listen" />
+
+        <TextView
+            android:id="@+id/item_recommend_songmenu_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/a"
+            android:layout_marginLeft="@dimen/activity_margin_five"
+            android:layout_toRightOf="@id/a"
+            android:text="number"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_ten_sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_recommend_newcd_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin_five"
+        android:layout_marginTop="@dimen/margin_three_dp"
+        android:maxEms="8"
+        android:maxLines="3"
+        android:textColor="@color/black_normal_most"
+        android:textSize="@dimen/textsize_twelve" />
+
+    <TextView
+        android:id="@+id/item_recommend_newcd_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin_five"
+        android:layout_marginTop="@dimen/margin_three_dp"
+        android:maxEms="8"
+        android:maxLines="3"
+        android:textColor="@color/black_normal_most"
+        android:textSize="@dimen/textsize_twelve"
+        android:visibility="gone" />
+
+
+</LinearLayout>
