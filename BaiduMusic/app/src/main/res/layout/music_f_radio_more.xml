@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <GridView
+        android:id="@+id/music_f_radio_more_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/height_thirty_dp"
+        android:fitsSystemWindows="false"
+        android:gravity="center"
+        android:listSelector="@android:color/transparent"
+        android:horizontalSpacing="@dimen/margin_eight"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/mymusic_margin_twenty"></GridView>
+
+
+</LinearLayout>

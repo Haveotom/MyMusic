@@ -177,12 +177,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.jingjiang.baidumusic.widget.NoScrollListView
+                <com.jingjiang.baidumusic.widget.view.NoScrollListView
                     android:id="@+id/ksong_allsing_listview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="@dimen/activity_margin_five"
-                    android:scrollbars="none"></com.jingjiang.baidumusic.widget.NoScrollListView>
+                    android:scrollbars="none"></com.jingjiang.baidumusic.widget.view.NoScrollListView>
 
             </LinearLayout>
 

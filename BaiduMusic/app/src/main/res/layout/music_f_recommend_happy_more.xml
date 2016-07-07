@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:background="@color/blue"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/music_recommend_happy_more_fanhui_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin_five"
+                android:src="@mipmap/fanhui" />
+
+            <TextView
+                android:id="@+id/music_recommend_happy_more_bar_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mymusic_padding_ten"
+                android:paddingTop="2dp"
+                android:text="热门歌手"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_fifteen" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/music_recommend_happy_more_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/mymusic_padding_ten"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/mymusic_padding_ten"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/mymusic_padding_ten"></GridView>
+
+    <LinearLayout
+        android:id="@+id/music_recommend_happy_more_zhubo_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:layout_margin="@dimen/mymusic_padding_ten"
+        android:background="@drawable/linearlayout_frame">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/happy_ibecomezhubo"
+            android:textColor="@color/orange_more"
+            android:textSize="@dimen/textsize_fifteen" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -13,8 +13,109 @@
     </FrameLayout>
 
     <LinearLayout
+        android:id="@+id/play_music_bar_layout_rl"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activity_player_foot"
-        android:background="@android:color/darker_gray" />
+        android:layout_height="@dimen/height_fortyfive"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/play_music_bar_icon_iv"
+            android:layout_width="@dimen/height_fortyfive"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/img_minibar_default" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_eight"
+            android:layout_toRightOf="@id/play_music_bar_icon_iv"
+            android:orientation="vertical">
+
+            <!--跑马灯效果-->
+            <!--android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"-->
+
+            <TextView
+                android:id="@+id/play_music_bar_title_iv"
+                android:layout_width="@dimen/height_eighty"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/activity_main_play_baidu"
+                android:textColor="@color/black_most"
+                android:textSize="@dimen/textsize_twelve" />
+
+            <TextView
+                android:id="@+id/play_music_bar_name_iv"
+                android:layout_width="@dimen/height_eighty"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/black_normal_least"
+                android:textSize="@dimen/textsize_ten_sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/play_music_bar_songmenu_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_margin_fifteen"
+                android:src="@mipmap/bt_minibar_playinglist_normal" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/play_music_bar_play_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_margin_fifteen"
+                    android:src="@mipmap/bt_minibar_play_normal" />
+
+                <ImageView
+                    android:id="@+id/play_music_bar_pause_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_margin_fifteen"
+                    android:src="@mipmap/bt_minibar_pause_normal"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/play_music_bar_next_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_margin_fifteen"
+                android:src="@mipmap/bt_minibar_next_normal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

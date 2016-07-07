@@ -1,6 +1,5 @@
 package com.jingjiang.baidumusic.fragment;
 
-import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.GravityCompat;
@@ -13,7 +12,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
-import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -24,11 +22,11 @@ import com.jingjiang.baidumusic.base.BaseFragment;
 import com.jingjiang.baidumusic.bean.KSongAllSingData;
 import com.jingjiang.baidumusic.bean.KSongPlayData;
 import com.jingjiang.baidumusic.inksong.ResumeDetailFragment;
-import com.jingjiang.baidumusic.widget.NoScrollListView;
-import com.jingjiang.baidumusic.widget.OnDrawerListener;
-import com.jingjiang.baidumusic.widget.OnViewPagerClickListener;
+import com.jingjiang.baidumusic.widget.view.NoScrollListView;
+import com.jingjiang.baidumusic.widget.myinterface.OnDrawerListener;
+import com.jingjiang.baidumusic.widget.myinterface.OnViewPagerClickListener;
 import com.jingjiang.baidumusic.widget.UrlTool;
-import com.jingjiang.baidumusic.widget.VolleySingle;
+import com.jingjiang.baidumusic.widget.single.VolleySingle;
 
 import java.util.ArrayList;
 

@@ -15,7 +15,7 @@
             android:layout_height="@dimen/margin_fifty">
 
             <ImageView
-                android:id="@+id/item_music_ranklist_detail_icon_iv"
+                android:id="@+id/item_recommend_today_icon_iv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/activity_margin_five"

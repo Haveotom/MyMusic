@@ -39,6 +39,11 @@
     <dimen name="textsize_thirteen">13sp</dimen>
     <dimen name="twohundred_eighty">280dp</dimen>
     <dimen name="two_hundred">200dp</dimen>
+    <dimen name="textsize_eight">8sp</dimen>
+    <dimen name="margin_thirteen">13dp</dimen>
+    <dimen name="margin_six">6dp</dimen>
+    <dimen name="height_twenty_two">22dp</dimen>
+    <dimen name="hundred_fifty">150dp</dimen>
 
 
 </resources>

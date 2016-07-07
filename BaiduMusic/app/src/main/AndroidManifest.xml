@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jingjiang.baidumusic">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".base.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.IndividualActivity"/>
-        <activity android:name=".individual.activity.ActiveActivity"/>
-        <activity android:name=".individual.activity.LoginActivity"/>
-        <activity android:name=".individual.activity.SetActivity"/>
-        <activity android:name=".individual.activity.UseActivtity"/>
+        <activity android:name=".activity.IndividualActivity" />
+        <activity android:name=".individual.activity.ActiveActivity" />
+        <activity android:name=".individual.activity.LoginActivity" />
+        <activity android:name=".individual.activity.SetActivity" />
+        <activity android:name=".individual.activity.UseActivtity" />
+        <activity android:name=".showsong.ShowSongActivity" />
+        <activity android:name=".inmusiclibrary.activity.MVDetailActivity" />
+        <activity android:name=".inmusicrecommend.activity.BecomeAuchorActivity" />
+        <activity android:name=".inmusicradio.activity.RadioMoreActivity" />
+        <activity android:name=".inmusicradio.activity.RadioMoreDetailActivity" />
+
+        <service android:name=".widget.service.PlaySongService" />
     </application>
 
 </manifest>

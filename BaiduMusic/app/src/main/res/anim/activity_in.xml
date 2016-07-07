@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:duration="300"
+    android:duration="200"
     android:fillAfter="true">
     <!--android:startOffset="1000"延时动画-->
     <!--android:fillAfter="true" 表示动画结束后的停留位置 true是停留位置 false是起始位置-->

@@ -69,7 +69,7 @@
 
     </RelativeLayout>
 
-    <com.jingjiang.baidumusic.widget.PullToRefreshView
+    <com.jingjiang.baidumusic.widget.view.PullToRefreshView
         android:id="@+id/music_f_mv_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -88,5 +88,5 @@
             android:scrollbars="none"
             android:stretchMode="columnWidth"></GridView>
 
-    </com.jingjiang.baidumusic.widget.PullToRefreshView>
+    </com.jingjiang.baidumusic.widget.view.PullToRefreshView>
 </LinearLayout>

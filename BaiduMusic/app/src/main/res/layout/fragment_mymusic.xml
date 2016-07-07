@@ -77,7 +77,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/acitivty_margin"
-                    android:src="@mipmap/bt_notificationbar_play" />
+                    android:src="@mipmap/bt_localmusic_play_nor" />
 
             </RelativeLayout>
 
@@ -290,9 +290,9 @@
                 android:text="收藏"
                 android:gravity="center"/>
 
-            <com.jingjiang.baidumusic.widget.NoScrollListView
+            <com.jingjiang.baidumusic.widget.view.NoScrollListView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></com.jingjiang.baidumusic.widget.NoScrollListView>
+                android:layout_height="match_parent"></com.jingjiang.baidumusic.widget.view.NoScrollListView>
 
 
         </LinearLayout>

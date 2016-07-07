@@ -22,4 +22,12 @@
     <string name="fragment_search_hot">热门搜索</string>
     <string name="more"><![CDATA[更多 >]]></string>
     <string name="refresh_header_arrow">下拉刷新</string>
+    <string name="activity_main_play_baidu">百度音乐 听到极致</string>
+    <string name="recommend_allsonger_hot">热门歌手</string>
+    <string name="allsinger">全部歌手</string>
+    <string name="recommend_newcd">新碟上架</string>
+    <string name="nothing_more">没有更多</string>
+    <string name="happy_ibecomezhubo">我要当主播</string>
+    <string name="regresh">刷新</string>
+    <string name="baidulebo">百度乐播</string>
 </resources>

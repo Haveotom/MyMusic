@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <ImageView
+                    android:id="@+id/detail_music_songmenu_icon_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp" />
+
+                <TextView
+                    android:id="@+id/detail_music_songmenu_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/margin_eight"
+                    android:layout_marginLeft="@dimen/margin_twelve_dp"
+                    android:layout_marginRight="@dimen/margin_twelve_dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_fifteen" />
+
+                <TextView
+                    android:id="@+id/detail_music_songmenu_little_word_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/detail_music_songmenu_title_tv"
+                    android:layout_alignLeft="@id/detail_music_songmenu_title_tv"
+                    android:textColor="@color/gray_nor"
+                    android:textSize="@dimen/textsize_twelve" />
+
+                <ImageView
+                    android:id="@+id/detail_music_songmenu_erji_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/detail_music_songmenu_little_word_tv"
+                    android:layout_marginLeft="@dimen/mymusic_padding_ten"
+                    android:layout_toRightOf="@id/detail_music_songmenu_little_word_tv"
+                    android:src="@mipmap/ic_lebo_listen" />
+
+                <TextView
+                    android:id="@+id/detail_music_songmenu_listen_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/detail_music_songmenu_erji_iv"
+                    android:layout_marginLeft="@dimen/margin_three_dp"
+                    android:layout_toRightOf="@id/detail_music_songmenu_erji_iv"
+                    android:textColor="@color/gray_nor"
+                    android:textSize="@dimen/textsize_twelve" />
+
+                <ImageView
+                    android:id="@+id/detail_music_songmenu_xin_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/margin_six"
+                    android:layout_marginLeft="@dimen/mymusic_padding_ten"
+                    android:layout_marginTop="@dimen/mymusic_padding_ten"
+                    android:layout_toRightOf="@id/detail_music_songmenu_listen_count_tv"
+                    android:src="@mipmap/heart1" />
+
+                <TextView
+                    android:id="@+id/detail_music_songmenu_like_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/detail_music_songmenu_erji_iv"
+                    android:layout_toRightOf="@id/detail_music_songmenu_xin_iv"
+                    android:textColor="@color/gray_nor"
+                    android:textSize="@dimen/textsize_twelve" />
+
+                <ImageView
+                    android:id="@+id/detail_music_songmenu_play_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/detail_music_songmenu_little_word_tv"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_margin_fifteen"
+                    android:clickable="true"
+                    android:src="@drawable/ranklist_play_selection" />
+
+                <TextView
+                    android:id="@+id/detail_music_songmenu_big_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/detail_music_songmenu_little_word_tv"
+                    android:layout_alignLeft="@id/detail_music_songmenu_little_word_tv"
+                    android:layout_marginBottom="@dimen/activity_margin_five"
+                    android:text="name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_fifteen" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty">
+
+                <TextView
+                    android:id="@+id/detail_music_songmenu_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_twelve_dp"
+                    android:textSize="@dimen/textsize_thirteen" />
+
+                <ImageView
+                    android:id="@+id/detail_music_songmenu_share_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/mymusic_padding_ten"
+                    android:src="@mipmap/ic_share_normal" />
+
+                <ImageView
+                    android:id="@+id/detail_music_songmenu_download_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_margin_five"
+                    android:layout_toLeftOf="@id/detail_music_songmenu_share_iv"
+                    android:src="@mipmap/ic_download_normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_margin_five"
+                    android:layout_toLeftOf="@id/detail_music_songmenu_download_iv"
+                    android:src="@mipmap/heart3" />
+
+            </RelativeLayout>
+
+            <View style="@style/line_all" />
+            <TextView
+                android:id="@+id/songmenu_detail_header_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                android:layout_marginLeft="@dimen/margin_twelve_dp"
+                android:layout_marginRight="@dimen/mymusic_padding_ten"
+                android:gravity="center_vertical"
+                android:maxLines="4"
+                android:textSize="@dimen/textsize_ten_sp" />
+            <View style="@style/line_all" />
+
+            <com.jingjiang.baidumusic.widget.view.NoScrollListView
+                android:id="@+id/detail_music_songmenu_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_eight"
+                android:layout_marginRight="@dimen/mymusic_padding_ten"
+                android:scrollbars="none"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/detail_music_songmenu_return_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:background="#e0000000"
+            android:src="@mipmap/fanhui" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

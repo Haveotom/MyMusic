@@ -12,9 +12,9 @@ import com.jingjiang.baidumusic.adapter.SearchAdapter;
 import com.jingjiang.baidumusic.base.BaseFragment;
 import com.jingjiang.baidumusic.bean.SearchBean;
 import com.jingjiang.baidumusic.bean.SearchContentData;
-import com.jingjiang.baidumusic.widget.OnDrawerListener;
+import com.jingjiang.baidumusic.widget.myinterface.OnDrawerListener;
 import com.jingjiang.baidumusic.widget.UrlTool;
-import com.jingjiang.baidumusic.widget.VolleySingle;
+import com.jingjiang.baidumusic.widget.single.VolleySingle;
 
 /**
  * Created by dllo on 16/6/25.

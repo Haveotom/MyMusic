@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mymusic_padding_ten">
+
+                <ImageView
+                    android:id="@+id/showsong_f_introduce_icon_iv"
+                    android:layout_width="@dimen/height_eighty"
+                    android:layout_height="@dimen/height_eighty"
+                    android:src="@mipmap/quanzhixian" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mymusic_padding_ten"
+                    android:layout_marginTop="@dimen/mymusic_padding_ten"
+                    android:layout_toRightOf="@id/showsong_f_introduce_icon_iv"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/showsong_f_introduce_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="歌手"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=">"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/showsong_f_introduce_icon_iv"
+                    android:layout_marginLeft="@dimen/mymusic_padding_ten"
+                    android:layout_marginTop="@dimen/mymusic_padding_ten"
+                    android:layout_toRightOf="@id/showsong_f_introduce_icon_iv"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/showsong_f_introduce_album_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="专辑"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=">"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_thirty_dp"
+                android:layout_below="@id/showsong_f_introduce_icon_iv"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/activity_margin_fifteen"
+                android:text="相似歌曲"
+                android:textColor="@color/gray_least"
+                android:textSize="@dimen/textsize_twelve" />
+
+            <com.jingjiang.baidumusic.widget.view.NoScrollListView
+                android:id="@+id/showsong_f_introduce_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"></com.jingjiang.baidumusic.widget.view.NoScrollListView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

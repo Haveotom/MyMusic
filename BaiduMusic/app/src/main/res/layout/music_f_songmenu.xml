@@ -14,6 +14,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/music_f_songmenu_all_songmenu_ll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -42,7 +43,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <com.jingjiang.baidumusic.widget.PullToRefreshView
+    <com.jingjiang.baidumusic.widget.view.PullToRefreshView
         android:id="@+id/music_f_songmenu_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -56,7 +57,7 @@
             android:layout_marginRight="@dimen/activity_margin_fifteen"
             android:numColumns="2"
             android:scrollbars="none"
-            android:stretchMode="columnWidth"/>
-    </com.jingjiang.baidumusic.widget.PullToRefreshView>
+            android:stretchMode="columnWidth" />
+    </com.jingjiang.baidumusic.widget.view.PullToRefreshView>
 
 </LinearLayout>

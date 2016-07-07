@@ -49,7 +49,7 @@
                 android:layout_marginTop="@dimen/mymusic_padding_ten"
                 android:orientation="vertical">
 
-                <com.jingjiang.baidumusic.widget.MyGridView
+                <com.jingjiang.baidumusic.widget.view.MyGridView
                     android:id="@+id/music_recommend_songclassify_gridview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.jingjiang.baidumusic.widget.MyGridView
+                <com.jingjiang.baidumusic.widget.view.MyGridView
                     android:id="@+id/music_recommend_songmenu_gridview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -189,7 +189,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.jingjiang.baidumusic.widget.MyGridView
+                <com.jingjiang.baidumusic.widget.view.MyGridView
                     android:id="@+id/music_recommend_mewcd_gridview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -242,15 +242,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="3" />
 
-                    <TextView
-                        android:id="@+id/music_recommend_hotsell_more_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="@dimen/activity_margin_fifteen"
-                        android:gravity="right"
-                        android:text="@string/more" />
-
 
                 </LinearLayout>
             </LinearLayout>
@@ -260,7 +251,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.jingjiang.baidumusic.widget.MyGridView
+                <com.jingjiang.baidumusic.widget.view.MyGridView
                     android:id="@+id/music_recommend_hotsell_gridview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -526,12 +517,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.jingjiang.baidumusic.widget.NoScrollListView
+                <com.jingjiang.baidumusic.widget.view.NoScrollListView
                     android:id="@+id/music_recommend_today_listview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/margin_twelve_dp"
-                    android:layout_marginRight="@dimen/mymusic_padding_ten"></com.jingjiang.baidumusic.widget.NoScrollListView>
+                    android:layout_marginRight="@dimen/mymusic_padding_ten"></com.jingjiang.baidumusic.widget.view.NoScrollListView>
 
             </LinearLayout>
 
@@ -575,7 +566,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.jingjiang.baidumusic.widget.MyGridView
+                <com.jingjiang.baidumusic.widget.view.MyGridView
                     android:id="@+id/music_recommend_t_gridview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -632,7 +623,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.jingjiang.baidumusic.widget.MyGridView
+                <com.jingjiang.baidumusic.widget.view.MyGridView
                     android:id="@+id/music_recommend_hotmv_gridview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -703,7 +694,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.jingjiang.baidumusic.widget.MyGridView
+                <com.jingjiang.baidumusic.widget.view.MyGridView
                     android:id="@+id/music_recommend_happy_gridview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -759,7 +750,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.jingjiang.baidumusic.widget.NoScrollListView
+                <com.jingjiang.baidumusic.widget.view.NoScrollListView
                     android:id="@+id/music_recommend_special_listview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

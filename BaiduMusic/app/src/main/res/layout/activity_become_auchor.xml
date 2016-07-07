@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:background="#e0000000"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/music_recommend_become_auchor_fanhui_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin_five"
+                android:src="@mipmap/fanhui" />
+
+            <TextView
+                android:id="@+id/music_recommend_become_auchor_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mymusic_padding_ten"
+                android:paddingTop="2dp"
+                android:text="@string/baidulebo"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_fifteen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <TextView
+            android:id="@+id/music_recommend_become_auchor_refresh_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/mymusic_padding_ten"
+            android:gravity="center_vertical"
+            android:text="@string/regresh"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_fifteen" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/lebobeijing1"/>
+
+</LinearLayout>

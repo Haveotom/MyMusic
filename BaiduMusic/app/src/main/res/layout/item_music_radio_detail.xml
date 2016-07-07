@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/width_hundred">
+
+        <ImageView
+            android:id="@+id/item_music_radio_more_detail_image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/icon_error" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white" />
+
+
+        <TextView
+            android:id="@+id/item_music_radio_more_detail_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/height_forty"
+            android:text="title"
+            android:textColor="@color/black_most"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_music_radio_more_detail_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/mymusic_margin_twenty"
+            android:text="name"
+            android:textColor="@color/black_normal_most"
+            android:textSize="@dimen/textsize_twelve" />
+
+        <ImageView
+            android:id="@+id/item_music_radio_more_detail_play_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/width_hundred"
+            android:background="@drawable/radio_play_selection"
+            android:clickable="true" />
+
+    </RelativeLayout>
+</LinearLayout>

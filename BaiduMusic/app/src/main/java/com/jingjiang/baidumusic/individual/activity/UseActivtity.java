@@ -10,7 +10,7 @@ import com.jingjiang.baidumusic.R;
 import com.jingjiang.baidumusic.base.BaseActivity;
 import com.jingjiang.baidumusic.individual.bean.UseData;
 import com.jingjiang.baidumusic.individual.adapter.UseAdapter;
-import com.jingjiang.baidumusic.widget.VolleySingle;
+import com.jingjiang.baidumusic.widget.single.VolleySingle;
 
 /**
  * Created by dllo on 16/6/29.

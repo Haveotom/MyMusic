@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/activity_music_radio_rablayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:fillViewport="false"
+        app:tabIndicatorColor="@android:color/transparent"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextAppearance="@style/activity_title_text"
+        app:tabTextColor="@color/littleBlue" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/radio_blue_lest" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_music_radio_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_fifty">
+
+        <ImageView
+            android:id="@+id/activity_music_radio_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/mymusic_padding_ten"
+            android:src="@mipmap/fault" />
+    </RelativeLayout>
+
+</LinearLayout>

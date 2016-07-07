@@ -8,8 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.ImageLoader;
 import com.jingjiang.baidumusic.R;
 import com.jingjiang.baidumusic.inmusiclibrary.bean.RankListDetailData;
+import com.jingjiang.baidumusic.widget.single.SingleQueue;
 
 import it.sephiroth.android.library.picasso.Picasso;
 
@@ -56,20 +58,39 @@ public class RankListDetailAdapter extends BaseAdapter {
         }
         holder.titleTv.setText(detailData.getSong_list().get(position).getTitle());
         holder.nameTv.setText(detailData.getSong_list().get(position).getAuthor());
-        Picasso.with(context).load(detailData.getSong_list().get(position).getPic_small()).resize(80, 80).into(holder.iconIv);
+        if (position == 0) {
+            holder.rankIv.setImageResource(R.mipmap.img_king_mask01);
+        } else if (position == 1) {
+            holder.rankIv.setImageResource(R.mipmap.img_king_mask02);
+        } else if (position == 2) {
+            holder.rankIv.setImageResource(R.mipmap.img_king_mask03);
+        } else {
+            holder.rankIv.setImageResource(R.mipmap.img_king_mask1);
+        }
+        if (Integer.valueOf(detailData.getSong_list().get(position).getRank()) < 10) {
+            holder.numTv.setText("0" + detailData.getSong_list().get(position).getRank());
+        }
+
+        holder.numTv.setText(detailData.getSong_list().get(position).getRank());
+
+        SingleQueue.getSingleQueue(context).getImageLoader().get(
+                detailData.getSong_list().get(position).getPic_small(),
+                ImageLoader.getImageListener(holder.iconIv,R.mipmap.view_loading,R.mipmap.view_loading));
 
 
         return convertView;
     }
 
     class RankListDetailViewHolder {
-        TextView titleTv, nameTv;
-        ImageView iconIv;
+        TextView titleTv, nameTv, numTv;
+        ImageView iconIv, rankIv;
 
         public RankListDetailViewHolder(View view) {
             titleTv = (TextView) view.findViewById(R.id.item_music_ranklist_detail_title_tv);
             nameTv = (TextView) view.findViewById(R.id.item_music_ranklist_detail_name_tv);
             iconIv = (ImageView) view.findViewById(R.id.item_music_ranklist_detail_icon_iv);
+            numTv = (TextView) view.findViewById(R.id.item_music_ranklist_detail_num_tv);
+            rankIv = (ImageView) view.findViewById(R.id.item_music_ranklist_detail_sanjiao_iv);
 
 
         }

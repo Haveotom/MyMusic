@@ -29,6 +29,16 @@ public final class UrlTool {
 
     //乐库中的推荐页
     public static final String RECOMMEND_ALL = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.8.0.1&channel=xiaomi&operator=2&method=baidu.ting.plaza.index&cuid=37C292E541CFC81D026F380EBAAE4111";
+    //新碟上架更多
+
+    //电台
+    public static final String Radio_LANGRAGE = "http://tingapi.ting.baidu.com/v1/restserver/ting/?method=baidu.ting.scene.getCategoryScene&category_id=4&version=5.2.5&from=ios&channel=appstore";
+    public static final String Radio_TOPIC = "http://tingapi.ting.baidu.com/v1/restserver/ting/?method=baidu.ting.scene.getCategoryScene&category_id=1&version=5.2.5&from=ios&channel=appstore";
+    public static final String Radio_ACTIVE = "http://tingapi.ting.baidu.com/v1/restserver/ting/?method=baidu.ting.scene.getCategoryScene&category_id=0&version=5.2.5&from=ios&channel=appstore";
+    public static final String Radio_STYLE = "http://tingapi.ting.baidu.com/v1/restserver/ting/?method=baidu.ting.scene.getCategoryScene&category_id=6&version=5.2.5&from=ios&channel=appstore";
+    public static final String Radio_TIME = "http://tingapi.ting.baidu.com/v1/restserver/ting/?method=baidu.ting.scene.getCategoryScene&category_id=5&version=5.2.5&from=ios&channel=appstore";
+    public static final String Radio_WEATHER = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.8.0.1&channel=xiaomi&operator=2&method=baidu.ting.song.getSmartSongList&scene_id=74&item_id=0&page_no=1&page_size=30";
+    public static final String Radio_FEELING = "http://tingapi.ting.baidu.com/v1/restserver/ting/?method=baidu.ting.scene.getCategoryScene&category_id=3&version=5.2.5&from=ios&channel=appstore";
 
 
 }

@@ -5,6 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <!--<color name="blue">#79b3fc</color>-->
     <color name="blue">#00bbff</color>
+    <color name="radio_blue">#00b8fa</color>
+    <color name="radio_blue_lest">#00bffa</color>
     <color name="littleBlue">#99ffff</color>
     <color name="black_most">#000000</color>
     <color name="black_normal_most">#333333</color>
@@ -12,8 +14,10 @@
     <color name="black_normal_least">#999999</color>
     <color name="black_least">#cccccc</color>
     <color name="gray">#dddddd</color>
+    <color name="gray_nor">#787878</color>
     <color name="gray_least">#eeeeee</color>
     <color name="white">#ffffff</color>
+    <color name="orange_more">#ff6600</color>
     <color name="orange">#ee7700</color>
     <color name="yellow">#ffcc00</color>
     <color name="green_less">#7cbd00</color>

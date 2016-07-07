@@ -101,6 +101,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/music_radio_more_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_margin_fifteen"

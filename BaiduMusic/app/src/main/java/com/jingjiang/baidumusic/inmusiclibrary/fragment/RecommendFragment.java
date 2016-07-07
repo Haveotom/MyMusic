@@ -1,11 +1,14 @@
 package com.jingjiang.baidumusic.inmusiclibrary.fragment;
 
+import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,10 +28,12 @@ import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.TAdapter;
 import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.TheSongMenuAdapter;
 import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.TodayAdapter;
 import com.jingjiang.baidumusic.inmusiclibrary.bean.RecommendData;
-import com.jingjiang.baidumusic.widget.MyGridView;
-import com.jingjiang.baidumusic.widget.NoScrollListView;
+import com.jingjiang.baidumusic.widget.view.MyGridView;
+import com.jingjiang.baidumusic.widget.view.NoScrollListView;
+import com.jingjiang.baidumusic.widget.myinterface.OnFragmentSkipListener;
+import com.jingjiang.baidumusic.widget.myinterface.OnClickSomeListener;
 import com.jingjiang.baidumusic.widget.UrlTool;
-import com.jingjiang.baidumusic.widget.VolleySingle;
+import com.jingjiang.baidumusic.widget.single.VolleySingle;
 
 import java.util.ArrayList;
 
@@ -37,7 +42,7 @@ import it.sephiroth.android.library.picasso.Picasso;
 /**
  * Created by dllo on 16/6/21.
  */
-public class RecommendFragment extends BaseFragment {
+public class RecommendFragment extends BaseFragment implements View.OnClickListener {
     private RecyclerAdapter recyclerAdapter;
     private RecommendData recommendData;
     private ViewPager viewPager;
@@ -67,10 +72,28 @@ public class RecommendFragment extends BaseFragment {
     private HotMVAdapter hotMVAdapter;
     private HappyAdapter happyAdapter;
     private SpecialAdapter specialAdapter;
+    private OnFragmentSkipListener recommendSkipListener;
+    private OnClickSomeListener onclickSomeListener;//跳fragment的点击事件
 
+    public void setOnclickSomeListener(OnClickSomeListener onclickSomeListener) {
+        this.onclickSomeListener = onclickSomeListener;
+    }
+
+    public void setRecommendSkipListener(OnFragmentSkipListener recommendSkipListener) {
+        this.recommendSkipListener = recommendSkipListener;
+    }
+
+
+    /* ******************************************************* */
     @Override
     protected int initLayout() {
         return R.layout.music_f_recommend;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        recommendSkipListener = (OnFragmentSkipListener) context;
+        super.onAttach(context);
     }
 
     @Override
@@ -83,14 +106,17 @@ public class RecommendFragment extends BaseFragment {
         //分类
         classifyAdapter = new ClassifyAdapter(getContext());
         classifyGridView = bindView(R.id.music_recommend_songclassify_gridview);
+
         //歌单推荐
         theSongMenuAdapter = new TheSongMenuAdapter(getContext());
         songMenuGridView = bindView(R.id.music_recommend_songmenu_gridview);
         songMenuIv = bindView(R.id.music_recommend_songmenu_recommend_iv);
+        bindView(R.id.music_recommend_songmenu_recommend_more_tv).setOnClickListener(this);//更多
         //新碟上架
         newCDGridView = bindView(R.id.music_recommend_mewcd_gridview);
         newCDAdapter = new NewCDAdapter(getContext());
         newCDIv = bindView(R.id.music_recommend_newcd_iv);
+        bindView(R.id.music_recommend_newcd_more_tv).setOnClickListener(this);
         //热销专辑
         hotSellGridView = bindView(R.id.music_recommend_hotsell_gridview);
         hotSellAdapter = new HotSellAdapter(getContext());
@@ -109,6 +135,7 @@ public class RecommendFragment extends BaseFragment {
         todayListView = bindView(R.id.music_recommend_today_listview);
         todayAdapter = new TodayAdapter(getContext());
         todayIv = bindView(R.id.music_recommend_today_iv);
+        bindView(R.id.music_recommend_today_more_tv).setOnClickListener(this);
         //T榜
         tAdapter = new TAdapter(getContext());
         tGridView = bindView(R.id.music_recommend_t_gridview);
@@ -118,6 +145,7 @@ public class RecommendFragment extends BaseFragment {
         //乐播节目
         happyAdapter = new HappyAdapter(getContext());
         happyGridView = bindView(R.id.music_recommend_happy_gridview);
+        bindView(R.id.music_recommend_happy_more_tv).setOnClickListener(this);//更多
         //专栏
         specialAdapter = new SpecialAdapter(getContext());
         specialListView = bindView(R.id.music_recommend_special_listview);
@@ -143,13 +171,45 @@ public class RecommendFragment extends BaseFragment {
                     public void onResponse(RecommendData response) {
                         classifyAdapter.setData(response);
                         theSongMenuAdapter.setData(response);
-                        Picasso.with(getContext()).load(response.getModule().get(2).getPicurl()).resize(25, 25).into(songMenuIv);
-                        Picasso.with(getContext()).load(response.getModule().get(5).getPicurl()).resize(25, 25).into(newCDIv);
                         newCDAdapter.setData(response);
                         hotSellAdapter.setData(response);
-                        Picasso.with(getContext()).load(response.getModule().get(6).getPicurl()).resize(25, 25).into(hotSellIv);
+                        todayAdapter.setData(response);
+                        tAdapter.setData(response);
+                        hotMVAdapter.setData(response);
+                        happyAdapter.setData(response);
+                        specialAdapter.setData(response);
+
+                        for (int i = 0; i < response.getModule().size(); i++) {
+                            String key = response.getModule().get(i).getKey();
+                            if (key == "diy") {
+                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(songMenuIv);
+                            } else if (key == "mix_1") {
+                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(newCDIv);
+                            } else if (key == "mix_22") {
+                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(hotSellIv);
+
+                            } else if (key == "scene") {
+                                Log.d("RecommendFragment", key);
+                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(videoIv);
+
+                            } else if (key == "recsong") {
+                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(todayIv);
+
+                            } else if (key == "mix_9") {
+                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(tIv);
+
+                            } else if (key == "mix_5") {
+                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(hotMVIv);
+
+                            } else if (key == "radio") {
+                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(happyIv);
+
+                            } else if (key == "mod_7") {
+                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(specialIv);
+
+                            }
+                        }
                         //场景电台
-                        Picasso.with(getContext()).load(response.getModule().get(7).getPicurl()).resize(25, 25).into(videoIv);
                         Picasso.with(getContext()).load(response.getResult().getScene().getResult().getAction().get(0).getIcon_android()).into(videoOneIv);
                         Picasso.with(getContext()).load(response.getResult().getScene().getResult().getAction().get(1).getIcon_android()).into(videoTwoIv);
                         Picasso.with(getContext()).load(response.getResult().getScene().getResult().getAction().get(2).getIcon_android()).into(videoThreeIv);
@@ -158,19 +218,6 @@ public class RecommendFragment extends BaseFragment {
                         videoTwoTv.setText(response.getResult().getScene().getResult().getAction().get(1).getScene_name());
                         videoThreeTv.setText(response.getResult().getScene().getResult().getAction().get(2).getScene_name());
                         videoFourTv.setText(response.getResult().getScene().getResult().getAction().get(3).getScene_name());
-
-                        //今日推荐
-                        Picasso.with(getContext()).load(response.getModule().get(8).getPicurl()).resize(25, 25).into(todayIv);
-                        Picasso.with(getContext()).load(response.getModule().get(9).getPicurl()).resize(25, 25).into(tIv);
-                        Picasso.with(getContext()).load(response.getModule().get(10).getPicurl()).resize(25, 25).into(hotMVIv);
-                        Picasso.with(getContext()).load(response.getModule().get(11).getPicurl()).resize(25, 25).into(happyIv);
-                        Picasso.with(getContext()).load(response.getModule().get(12).getPicurl()).resize(25, 25).into(specialIv);
-
-                        todayAdapter.setData(response);
-                        tAdapter.setData(response);
-                        hotMVAdapter.setData(response);
-                        happyAdapter.setData(response);
-                        specialAdapter.setData(response);
 
                     }
                 }, RecommendData.class);
@@ -183,8 +230,22 @@ public class RecommendFragment extends BaseFragment {
         hotMVGridView.setAdapter(hotMVAdapter);
         happyGridView.setAdapter(happyAdapter);
         specialListView.setAdapter(specialAdapter);
+        initClick();
 
 
+    }
+
+    private void initClick() {
+        classifyGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (recommendSkipListener != null) {
+                    if (position == 1) {
+                        recommendSkipListener.toSkipFragment(3);
+                    }
+                }
+            }
+        });
     }
 
     /**
@@ -318,5 +379,32 @@ public class RecommendFragment extends BaseFragment {
 
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.music_recommend_songmenu_recommend_more_tv:
+                if (onclickSomeListener != null) {
+                    onclickSomeListener.onClickSome();
+                }
+                break;
+            case R.id.music_recommend_newcd_more_tv:
+                if (recommendSkipListener != null) {
+                    recommendSkipListener.toSkipFragment(5);//新碟上架更多
+                }
+                break;
+            case R.id.music_recommend_happy_more_tv:
+                if (recommendSkipListener != null) {
+                    recommendSkipListener.toSkipFragment(6);//乐播节目更多
+                }
+                break;
+            case R.id.music_recommend_today_more_tv:
+                if (recommendSkipListener != null) {
+                    recommendSkipListener.toSkipFragment(7);//今日推荐更多
+                }
+                break;
 
+
+        }
+
+    }
 }

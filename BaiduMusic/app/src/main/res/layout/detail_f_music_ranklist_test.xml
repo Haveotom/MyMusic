@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detail_music_ranklist_cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/detail_music_ranklist_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:collapsedTitleTextAppearance="@style/ToolBarTitleText"
+            app:contentScrim="#46a8ba"
+            app:expandedTitleMarginEnd="48dp"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleTextAppearance="@style/transparentText"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:id="@+id/detail_music_ranklist_head_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/detail_music_ranklist_icon_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/detail_music_ranklist_date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/margin_twelve_dp"
+                    android:text="更新日期"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_twelve" />
+
+                <ImageView
+                    android:id="@+id/detail_music_ranklist_play_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/detail_music_ranklist_date_tv"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_margin_fifteen"
+                    android:clickable="true"
+                    android:src="@drawable/ranklist_play_selection" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/detail_music_ranklist_tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_forty"
+                app:layout_collapseMode="pin"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_forty"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/detail_music_songmenu_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_twelve_dp"
+                android:textSize="@dimen/textsize_thirteen" />
+
+            <ImageView
+                android:id="@+id/detail_music_songmenu_share_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/mymusic_padding_ten"
+                android:src="@mipmap/ic_share_normal" />
+
+            <ImageView
+                android:id="@+id/detail_music_songmenu_download_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/activity_margin_five"
+                android:layout_toLeftOf="@id/detail_music_songmenu_share_iv"
+                android:src="@mipmap/ic_download_normal" />
+
+        </RelativeLayout>
+
+        <View style="@style/line_all" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/detail_music_songmenu_nsv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jingjiang.baidumusic.widget.view.NoScrollListView
+            android:id="@+id/detail_music_ranklist_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_eight"
+            android:layout_marginRight="@dimen/mymusic_padding_ten"
+            android:scrollbars="none" />
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

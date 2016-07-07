@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/showsong_f_picture_big_icon_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mymusic_padding_ten"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/default_album_playing" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:src="@mipmap/bt_playpage_button_searchpicandlyric_normal" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_sixty"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/showsong_f_picture_ktv_iv"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_thirteen"
+            android:layout_weight="1"
+            android:src="@mipmap/bt_playpage_ktv_normal" />
+
+        <ImageView
+            android:id="@+id/showsong_f_picture_download_iv"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_thirteen"
+            android:layout_weight="1"
+            android:src="@mipmap/bt_playpage_button_download_normal" />
+
+        <ImageView
+            android:id="@+id/showsong_f_picture_like_iv"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_thirteen"
+            android:layout_weight="1"
+            android:src="@mipmap/bt_playpage_button_like_normal" />
+
+        <ImageView
+            android:id="@+id/showsong_f_picture_more_iv"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_thirteen"
+            android:layout_weight="1"
+            android:src="@mipmap/bt_playpage_moreactions_normal" />
+
+    </LinearLayout>
+
+</LinearLayout>

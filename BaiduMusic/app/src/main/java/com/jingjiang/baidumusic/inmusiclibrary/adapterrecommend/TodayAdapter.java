@@ -72,7 +72,7 @@ public class TodayAdapter extends BaseAdapter {
         public TodayViewHolder(View view) {
             titleTv = (TextView) view.findViewById(R.id.item_recommend_today_title_tv);
             nameTv = (TextView) view.findViewById(R.id.item_recommend_today_name_tv);
-            iconIv = (ImageView) view.findViewById(R.id.item_music_ranklist_detail_icon_iv);
+            iconIv = (ImageView) view.findViewById(R.id.item_recommend_today_icon_iv);
 
         }
     }

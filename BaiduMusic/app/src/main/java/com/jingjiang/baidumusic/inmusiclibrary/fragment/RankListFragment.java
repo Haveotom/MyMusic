@@ -1,27 +1,20 @@
 package com.jingjiang.baidumusic.inmusiclibrary.fragment;
 
 import android.content.Context;
-import android.os.Bundle;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.jingjiang.baidumusic.R;
 import com.jingjiang.baidumusic.base.BaseFragment;
-import com.jingjiang.baidumusic.eventbusclass.IntegerEvent;
+import com.jingjiang.baidumusic.widget.eventbus.IntegerEvent;
 import com.jingjiang.baidumusic.inmusiclibrary.adapter.RankListAdapter;
 import com.jingjiang.baidumusic.inmusiclibrary.bean.RankListData;
-import com.jingjiang.baidumusic.widget.OnFragmentSkipListener;
+import com.jingjiang.baidumusic.widget.myinterface.OnFragmentSkipListener;
 import com.jingjiang.baidumusic.widget.UrlTool;
-import com.jingjiang.baidumusic.widget.VolleySingle;
+import com.jingjiang.baidumusic.widget.single.VolleySingle;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -101,7 +94,7 @@ public class RankListFragment extends BaseFragment implements AdapterView.OnItem
     //http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.8.0.1&channel=xiaomi&operator=2&method=baidu.ting.diy.gedanInfo&format=json&listid=6705&isUGC=0
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if (fragmentSkipListener != null) {
-            fragmentSkipListener.toSkipFragment();
+            fragmentSkipListener.toSkipFragment(1);
             EventBus.getDefault().post(new IntegerEvent(data.getContent().get(position).getType()));
 
 

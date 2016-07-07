@@ -5,9 +5,8 @@ import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.jingjiang.baidumusic.widget.OnViewPagerClickListener;
+import com.jingjiang.baidumusic.widget.myinterface.OnViewPagerClickListener;
 
 import java.util.ArrayList;
 
@@ -66,7 +65,7 @@ public class KSongResumPlayAdapter extends PagerAdapter {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.onClick(v,position);
+                listener.onClick(v, position);
             }
         });
 

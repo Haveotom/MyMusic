@@ -71,7 +71,7 @@
 
             </LinearLayout>
 
-            <com.jingjiang.baidumusic.widget.MyGridView
+            <com.jingjiang.baidumusic.widget.view.MyGridView
                 android:id="@+id/live_gridview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

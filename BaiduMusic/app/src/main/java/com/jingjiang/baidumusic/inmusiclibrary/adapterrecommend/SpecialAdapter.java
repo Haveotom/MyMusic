@@ -71,7 +71,7 @@ public class SpecialAdapter extends BaseAdapter {
         TextView titleTv, nameTv;
 
         public SpecialViewHolder(View view) {
-            iconIv = (ImageView) view.findViewById(R.id.item_music_ranklist_detail_icon_iv);
+            iconIv = (ImageView) view.findViewById(R.id.item_recommend_today_icon_iv);
             titleTv = (TextView) view.findViewById(R.id.item_recommend_today_title_tv);
             nameTv = (TextView) view.findViewById(R.id.item_recommend_today_name_tv);
             rightIv = (ImageView) view.findViewById(R.id.item_recommend_today_right_iv);

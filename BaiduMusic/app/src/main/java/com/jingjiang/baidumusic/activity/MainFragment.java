@@ -17,7 +17,7 @@ import com.jingjiang.baidumusic.fragment.LiveFragment;
 import com.jingjiang.baidumusic.fragment.MyMusicFragment;
 import com.jingjiang.baidumusic.fragment.MusicLibraryFragment;
 import com.jingjiang.baidumusic.fragment.SearchFragment;
-import com.jingjiang.baidumusic.widget.OnDrawerListener;
+import com.jingjiang.baidumusic.widget.myinterface.OnDrawerListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,13 +87,6 @@ public class MainFragment extends BaseFragment implements View.OnClickListener, 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if (position == 2) {
-                    kSongFragment.setScroll();
-                }
-                if (position == 3) {
-                    liveFragment.setScroll();
-
-                }
             }
 
             @Override
@@ -103,20 +96,10 @@ public class MainFragment extends BaseFragment implements View.OnClickListener, 
                 }
                 if (position == 3) {
                     liveFragment.setScroll();
-
                 }
             }
-
             @Override
             public void onPageScrollStateChanged(int state) {
-                if (state == 2) {
-                    kSongFragment.setScroll();
-                }
-                if (state == 3) {
-                    liveFragment.setScroll();
-
-                }
-
             }
         });
 

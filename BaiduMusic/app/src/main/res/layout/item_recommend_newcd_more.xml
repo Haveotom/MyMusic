@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/item_recommend_newcd_more_picture_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_error" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/item_recommend_newcd_more_picture_iv"
+            android:layout_alignRight="@id/item_recommend_newcd_more_picture_iv"
+            android:layout_marginRight="@dimen/textsize_fifteen"
+            android:layout_marginBottom="@dimen/activity_margin_five"
+            android:src="@drawable/ranklist_play_selection" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/op"
+        android:layout_below="@id/op"
+        android:layout_marginLeft="@dimen/mymusic_padding_ten"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_recommend_newcd_more_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_three_dp"
+            android:maxLines="3"
+            android:text="hh"
+            android:textColor="@color/black_normal_most"
+            android:textSize="@dimen/textsize_thirteen" />
+
+        <TextView
+            android:id="@+id/item_recommend_newcd_more_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_three_dp"
+            android:maxLines="3"
+            android:textColor="@color/black_normal_least"
+            android:textSize="@dimen/textsize_ten_sp" />
+    </LinearLayout>
+
+</RelativeLayout>
