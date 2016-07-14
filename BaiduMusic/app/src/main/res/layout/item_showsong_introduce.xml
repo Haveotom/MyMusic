@@ -17,7 +17,6 @@
             android:id="@+id/item_showsong_introduce_song_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="song"
             android:textColor="@color/gray"
             android:textSize="@dimen/activity_margin_fifteen" />
 
@@ -25,7 +24,6 @@
             android:id="@+id/item_showsong_introduce_name_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="name"
             android:textColor="@color/gray"
             android:textSize="@dimen/textsize_thirteen" />
     </LinearLayout>

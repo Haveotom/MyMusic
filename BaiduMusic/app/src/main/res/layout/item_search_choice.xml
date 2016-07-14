@@ -14,7 +14,6 @@
         android:paddingLeft="@dimen/margin_eight"
         android:paddingRight="@dimen/margin_eight"
         android:paddingTop="@dimen/activity_margin_five"
-        android:text="太阳的后裔"
         android:maxLines="1"
         android:textColor="@color/black_normal"
         android:textSize="@dimen/textsize_twelve" />

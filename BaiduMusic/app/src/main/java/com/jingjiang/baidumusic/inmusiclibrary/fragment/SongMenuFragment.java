@@ -19,7 +19,7 @@ import com.jingjiang.baidumusic.inmusiclibrary.adapter.SongMenuAdapter;
 import com.jingjiang.baidumusic.inmusiclibrary.bean.SongMenuData;
 import com.jingjiang.baidumusic.widget.myinterface.OnFragmentSkipListener;
 import com.jingjiang.baidumusic.widget.view.PullToRefreshView;
-import com.jingjiang.baidumusic.widget.UrlTool;
+import com.jingjiang.baidumusic.widget.othertool.UrlTool;
 import com.jingjiang.baidumusic.widget.single.VolleySingle;
 
 import org.greenrobot.eventbus.EventBus;
@@ -98,8 +98,6 @@ public class SongMenuFragment extends BaseFragment implements PullToRefreshView.
         allPopWindow.setContentView(view);
         allPopWindow.setFocusable(true);//可点击
         allPopWindow.setAnimationStyle(R.style.AnimPopupWindpwBottom);
-
-//        allPopWindow.showAtLocation(view, Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
 
         //添加OnTouchListener监听判断获取触屏位置如果在选择框外面则销毁弹出框
         view.setOnTouchListener(new View.OnTouchListener() {

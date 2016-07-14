@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_seventy">
+
+        <ImageView
+            android:id="@+id/item_all_singer_different_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/mymusic_padding_ten"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/item_all_singer_different_name_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/mymusic_padding_ten"
+            android:layout_toRightOf="@id/item_all_singer_different_icon_iv"
+            android:text="@string/app_name"
+            android:textColor="@color/black_normal_most"
+            android:textSize="@dimen/textsize_thirteen" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_margin_fifteen"
+            android:src="@mipmap/right1" />
+
+    </RelativeLayout>
+
+</LinearLayout>

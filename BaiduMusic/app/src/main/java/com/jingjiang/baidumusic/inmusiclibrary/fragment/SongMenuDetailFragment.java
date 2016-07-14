@@ -1,5 +1,6 @@
 package com.jingjiang.baidumusic.inmusiclibrary.fragment;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -15,12 +16,12 @@ import com.jingjiang.baidumusic.widget.eventbus.StringEvent;
 import com.jingjiang.baidumusic.inmusiclibrary.adapter.SongMenuDetailAdapter;
 import com.jingjiang.baidumusic.inmusiclibrary.bean.SongMenuDetailData;
 import com.jingjiang.baidumusic.widget.single.VolleySingle;
+import com.squareup.picasso.Picasso;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import it.sephiroth.android.library.picasso.Picasso;
 
 /**
  * Created by dllo on 16/7/2.
@@ -69,8 +70,6 @@ public class SongMenuDetailFragment extends BaseFragment implements View.OnClick
 
             }
         });
-
-
     }
 
     @Override

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/play_menu_ing"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero_point_five"
+        android:background="@color/gray_least" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/activity_playmenu_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+        </ListView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_playmenu_close"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:layout_marginBottom="@dimen/mymusic_padding_ten"
+        android:gravity="center"
+        android:text="@string/close"
+        android:textColor="@color/white"
+        android:textSize="@dimen/activity_margin_fifteen" />
+
+</LinearLayout>

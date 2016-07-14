@@ -7,7 +7,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/width_hundred">
+        android:layout_marginBottom="@dimen/width_hundred"
+        android:layout_marginLeft="@dimen/mymusic_padding_ten"
+        android:layout_marginRight="@dimen/mymusic_padding_ten"
+        android:layout_marginTop="@dimen/mymusic_margin_twenty">
 
         <ImageView
             android:id="@+id/item_music_radio_more_detail_image_iv"
@@ -17,7 +20,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="@dimen/width_hundred"
             android:layout_alignParentBottom="true"
             android:background="@color/white" />
 
@@ -29,7 +32,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/height_forty"
-            android:text="title"
+
             android:textColor="@color/black_most"
             android:textSize="16sp" />
 
@@ -40,19 +43,32 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/mymusic_margin_twenty"
-            android:text="name"
+            android:maxLines="3"
             android:textColor="@color/black_normal_most"
             android:textSize="@dimen/textsize_twelve" />
 
-        <ImageView
-            android:id="@+id/item_music_radio_more_detail_play_iv"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/width_hundred"
-            android:background="@drawable/radio_play_selection"
-            android:clickable="true" />
+            android:layout_marginBottom="@dimen/height_eighty">
+
+            <ImageView
+                android:id="@+id/item_music_radio_more_detail_play_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/scenario_drive_pause_button_normal" />
+
+            <ImageView
+                android:id="@+id/item_music_radio_more_detail_pause_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/scenario_drive_play_button_press"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
 
     </RelativeLayout>
 </LinearLayout>

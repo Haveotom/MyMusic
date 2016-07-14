@@ -31,7 +31,6 @@
             android:layout_alignBottom="@id/a"
             android:layout_marginLeft="@dimen/activity_margin_five"
             android:layout_toRightOf="@id/a"
-            android:text="number"
             android:textColor="@color/white"
             android:textSize="@dimen/textsize_ten_sp" />
 

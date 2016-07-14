@@ -16,7 +16,7 @@ import com.jingjiang.baidumusic.inmusiclibrary.adapter.MVAdapter;
 import com.jingjiang.baidumusic.inmusiclibrary.bean.MVData;
 import com.jingjiang.baidumusic.inmusiclibrary.bean.MVDetailData;
 import com.jingjiang.baidumusic.widget.view.PullToRefreshView;
-import com.jingjiang.baidumusic.widget.UrlTool;
+import com.jingjiang.baidumusic.widget.othertool.UrlTool;
 import com.jingjiang.baidumusic.widget.single.VolleySingle;
 
 

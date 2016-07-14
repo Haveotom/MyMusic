@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/mymusic_padding_ten"
                 android:paddingTop="2dp"
-                android:text="更多"
+                android:text="@string/individual_more"
                 android:textColor="@color/white"
                 android:textSize="@dimen/textsize_fifteen" />
         </LinearLayout>
@@ -41,40 +41,86 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_fifty_five">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/activity_individual_login_no_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_fifty_five">
 
             <LinearLayout
-                android:id="@+id/activity_individual_login_ll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/individual_activity_login_frame">
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/activity_individual_login_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/individual_activity_login_frame">
+
+                    <TextView
+                        android:id="@+id/activity_individual_login_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_five"
+                        android:layout_marginRight="@dimen/activity_margin_five"
+                        android:padding="@dimen/activity_margin_five"
+                        android:text="@string/individual_login"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/textsize_twelve" />
+
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/activity_individual_login_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="@dimen/activity_margin_five"
-                    android:layout_marginRight="@dimen/activity_margin_five"
-                    android:padding="@dimen/activity_margin_five"
-                    android:text="立即登录"
-                    android:textColor="@color/blue"
+                    android:layout_marginLeft="@dimen/margin_eight"
+                    android:text="@string/login_after"
+                    android:textColor="@color/black_normal_least"
                     android:textSize="@dimen/textsize_twelve" />
-
             </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_individual_login_yes_ll"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="@dimen/height_fifty_five">
+
+            <ImageView
+                android:layout_width="@dimen/height_forty"
+                android:layout_height="@dimen/height_forty"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/mymusic_margin_twenty"
+                android:src="@mipmap/login_head" />
 
             <TextView
+                android:id="@+id/activity_individual_login_name_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/margin_eight"
-                android:text="登录后,自动为您同步歌曲"
+                android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                android:text="@string/zhanghao"
+                android:textColor="@color/black_normal_most" />
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/activity_individual_close_login_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/mymusic_margin_twenty"
+                android:text="@string/exit"
                 android:textColor="@color/black_normal_least"
-                android:textSize="@dimen/textsize_twelve" />
+                android:textSize="@dimen/textsize_fifteen" />
+
+
         </LinearLayout>
     </RelativeLayout>
 
@@ -107,7 +153,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mymusic_padding_ten"
                 android:gravity="center"
-                android:text="仅WiFi联网" />
+                android:text="@string/wifi" />
 
         </LinearLayout>
 
@@ -128,7 +174,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mymusic_padding_ten"
                 android:gravity="center"
-                android:text="定时关闭" />
+                android:text="@string/close_timing" />
 
         </LinearLayout>
 
@@ -149,7 +195,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mymusic_padding_ten"
                 android:gravity="center"
-                android:text="桌面歌词" />
+                android:text="@string/desctop_lrc" />
 
         </LinearLayout>
 
@@ -170,7 +216,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mymusic_padding_ten"
                 android:gravity="center"
-                android:text="锁屏" />
+                android:text="@string/locking" />
 
         </LinearLayout>
     </LinearLayout>
@@ -203,7 +249,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_eight"
                 android:gravity="center"
-                android:text="换肤" />
+                android:text="@string/change_face" />
 
         </LinearLayout>
 
@@ -224,7 +270,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_eight"
                 android:gravity="center"
-                android:text="音效" />
+                android:text="@string/music_big" />
 
         </LinearLayout>
 
@@ -245,7 +291,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_eight"
                 android:gravity="center"
-                android:text="扫描歌曲" />
+                android:text="@string/scanning" />
 
         </LinearLayout>
 
@@ -266,7 +312,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_eight"
                 android:gravity="center"
-                android:text="听歌识曲" />
+                android:text="@string/listen" />
 
         </LinearLayout>
     </LinearLayout>
@@ -297,7 +343,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_eight"
                 android:gravity="center"
-                android:text="电脑导歌" />
+                android:text="@string/computer" />
 
         </LinearLayout>
 
@@ -318,7 +364,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_eight"
                 android:gravity="center"
-                android:text="成为白金VIP" />
+                android:text="@string/vip" />
 
         </LinearLayout>
 
@@ -339,7 +385,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_eight"
                 android:gravity="center"
-                android:text="雷石点唱机" />
+                android:text="@string/leidian" />
 
         </LinearLayout>
 
@@ -380,7 +426,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/activity_margin_fifteen"
-                android:text="设置"
+                android:text="@string/shezhi"
                 android:textColor="@color/black_normal_most"
                 android:textSize="@dimen/textsize_fifteen" />
 
@@ -407,7 +453,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/activity_margin_fifteen"
-                android:text="活动专区"
+                android:text="@string/active_zone"
                 android:textColor="@color/black_normal_most"
                 android:textSize="@dimen/textsize_fifteen" />
 
@@ -435,7 +481,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/activity_margin_fifteen"
-                android:text="精品应用"
+                android:text="@string/application"
                 android:textColor="@color/black_normal_most"
                 android:textSize="@dimen/textsize_fifteen" />
 

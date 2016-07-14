@@ -38,7 +38,6 @@
             android:layout_gravity="bottom"
             android:layout_marginBottom="@dimen/margin_eight"
             android:layout_marginLeft="@dimen/height_thirty_dp"
-            android:text="number"
             android:textColor="@color/white"
             android:textSize="@dimen/textsize_ten_sp" />
 
@@ -57,7 +56,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_margin_fifteen"
         android:layout_marginTop="@dimen/activity_margin_five"
-        android:text="name"
         android:textSize="@dimen/textsize_twelve"
         android:layout_marginLeft="@dimen/mymusic_padding_ten"
         android:textColor="@color/black_normal_most" />

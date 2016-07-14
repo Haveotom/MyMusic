@@ -51,6 +51,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/mymusic_bendi_rl"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/margin_fifty">
 
@@ -84,6 +85,7 @@
             <View style="@style/line_null_left" />
 
             <RelativeLayout
+                android:id="@+id/mymusic_recent_play_rl"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/margin_fifty">
 
@@ -117,6 +119,7 @@
             <View style="@style/line_null_left" />
 
             <RelativeLayout
+                android:id="@+id/mymusic_download_rl"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/margin_fifty">
 
@@ -129,6 +132,7 @@
                     android:src="@mipmap/ic_mymusic_download_normal" />
 
                 <TextView
+                    android:id="@+id/download_tv"
                     style="@style/text_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -145,11 +149,22 @@
                     android:layout_marginRight="@dimen/acitivty_margin"
                     android:src="@mipmap/btn_more_left_arrow_nor" />
 
+                <TextView
+                    android:id="@+id/mymusic_myksong_download_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_eight"
+                    android:layout_toRightOf="@id/download_tv"
+                    android:textColor="@color/black_normal_least"
+                    android:textSize="@dimen/textsize_twelve" />
+
             </RelativeLayout>
 
             <View style="@style/line_null_left" />
 
             <RelativeLayout
+                android:id="@+id/mymusic_myksong_rl"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/margin_fifty">
 
@@ -191,6 +206,7 @@
                 android:text="@string/mymusic_songlist" />
 
             <RelativeLayout
+                android:id="@+id/mymusic_ilike_rl"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/margin_fifty">
 
@@ -213,13 +229,15 @@
                     android:textColor="@color/black_normal_most" />
 
                 <TextView
+                    android:id="@+id/mymusic_singlesong_count_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/mymusic_singlesong"
                     android:layout_marginLeft="@dimen/acitivty_margin"
                     android:layout_toRightOf="@id/mymusic_ilike_iv"
                     android:text="0首"
-                    android:textColor="@color/black_normal_least" />
+                    android:textColor="@color/black_normal_least"
+                    android:textSize="@dimen/textsize_twelve" />
 
 
                 <ImageView
@@ -234,6 +252,7 @@
             <View style="@style/line_null_left_more" />
 
             <RelativeLayout
+                android:id="@+id/mymusic_new_songlist_rl"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/margin_fifty">
 
@@ -274,7 +293,13 @@
                     android:text="@string/mymusic_shoucang" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/mymusic_manage"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="@dimen/acitivty_margin"
@@ -283,12 +308,13 @@
                     android:textColor="@color/black_normal_least"
                     android:textSize="@dimen/textsize_twelve" />
             </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="600dp"
-                android:textSize="30sp"
-                android:text="收藏"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/shoucang"
+                android:textSize="30sp" />
 
             <com.jingjiang.baidumusic.widget.view.NoScrollListView
                 android:layout_width="match_parent"

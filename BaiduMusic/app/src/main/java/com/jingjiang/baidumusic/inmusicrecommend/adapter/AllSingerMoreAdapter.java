@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import com.jingjiang.baidumusic.R;
 import com.jingjiang.baidumusic.inmusicrecommend.data.AllSingerMoreData;
+import com.squareup.picasso.Picasso;
 
-import it.sephiroth.android.library.picasso.Picasso;
 
 /**
  * Created by dllo on 16/7/5.
@@ -55,6 +55,7 @@ public class AllSingerMoreAdapter extends BaseAdapter {
             holder = (AllSingerMoreViewHolder) convertView.getTag();
         }
         holder.nameTv.setText(data.getArtist().get(position).getName());
+
         Picasso.with(context).load(data.getArtist().get(position).getAvatar_big()).error(R.mipmap.default_newalbum).into(holder.iconIv);
 
         return convertView;

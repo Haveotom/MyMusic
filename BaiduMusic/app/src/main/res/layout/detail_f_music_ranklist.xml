@@ -16,12 +16,12 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="220dp">
+                android:layout_height="@dimen/two_hundred_twenty">
 
                 <ImageView
                     android:id="@+id/detail_music_ranklist_icon_iv"
                     android:layout_width="match_parent"
-                    android:layout_height="220dp" />
+                    android:layout_height="@dimen/two_hundred_twenty" />
 
                 <TextView
                     android:id="@+id/detail_music_ranklist_date_tv"
@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_margin="@dimen/margin_twelve_dp"
-                    android:text="更新日期"
+                    android:text="@string/update_date"
                     android:textColor="@color/white"
                     android:textSize="@dimen/textsize_twelve" />
 
@@ -92,7 +92,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_forty"
-        android:background="#e0000000"
+        android:background="@color/alpha"
         android:orientation="horizontal">
 
         <ImageView

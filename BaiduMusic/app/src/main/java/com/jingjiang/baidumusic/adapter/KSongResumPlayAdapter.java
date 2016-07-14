@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.jingjiang.baidumusic.widget.myinterface.OnViewPagerClickListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-import it.sephiroth.android.library.picasso.Picasso;
 
 /**
  * Created by dllo on 16/6/24.

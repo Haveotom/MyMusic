@@ -51,9 +51,9 @@
             android:textSize="@dimen/textsize_fifteen" />
     </LinearLayout>
 
-    <ImageView
+    <WebView
+        android:id="@+id/music_recommend_become_auchor_webview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@mipmap/lebobeijing1"/>
+        android:layout_height="match_parent"></WebView>
 
 </LinearLayout>

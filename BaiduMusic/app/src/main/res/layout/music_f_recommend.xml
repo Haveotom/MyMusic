@@ -93,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="@dimen/activity_margin_five"
-                        android:text="歌单推荐" />
+                        android:text="@string/songmenu" />
 
                     <View
                         android:layout_width="@dimen/zero"
@@ -132,7 +132,7 @@
                     android:numColumns="3"
                     android:scrollbars="none"
                     android:stretchMode="columnWidth"
-                    android:verticalSpacing="10dp" />
+                    android:verticalSpacing="@dimen/mymusic_padding_ten" />
             </LinearLayout>
 
             <View
@@ -164,7 +164,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="@dimen/activity_margin_five"
-                        android:text="新碟上架" />
+                        android:text="@string/newcd" />
 
                     <View
                         android:layout_width="@dimen/zero"
@@ -203,7 +203,7 @@
                     android:numColumns="3"
                     android:scrollbars="none"
                     android:stretchMode="columnWidth"
-                    android:verticalSpacing="10dp" />
+                    android:verticalSpacing="@dimen/mymusic_padding_ten" />
             </LinearLayout>
 
             <View
@@ -235,7 +235,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="@dimen/activity_margin_five"
-                        android:text="热销专辑" />
+                        android:text="@string/hotsell" />
 
                     <View
                         android:layout_width="@dimen/zero"
@@ -265,7 +265,7 @@
                     android:numColumns="3"
                     android:scrollbars="none"
                     android:stretchMode="columnWidth"
-                    android:verticalSpacing="10dp" />
+                    android:verticalSpacing="@dimen/mymusic_padding_ten" />
             </LinearLayout>
 
             <View
@@ -297,7 +297,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="@dimen/activity_margin_five"
-                        android:text="场景电台" />
+                        android:text="@string/radio" />
 
                     <View
                         android:layout_width="@dimen/zero"
@@ -351,7 +351,6 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="@dimen/activity_margin_five"
                         android:gravity="center_horizontal"
-                        android:text="一个人"
                         android:textColor="@color/orange"
                         android:textSize="@dimen/textsize_twelve" />
 
@@ -386,7 +385,6 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="@dimen/activity_margin_five"
                         android:gravity="center_horizontal"
-                        android:text="一个人"
                         android:textColor="@color/green_less"
                         android:textSize="@dimen/textsize_twelve" />
 
@@ -421,7 +419,6 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="@dimen/activity_margin_five"
                         android:gravity="center_horizontal"
-                        android:text="一个人"
                         android:textColor="@color/green_more"
                         android:textSize="@dimen/textsize_twelve" />
 
@@ -456,7 +453,6 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="@dimen/activity_margin_five"
                         android:gravity="center_horizontal"
-                        android:text="一个人"
                         android:textColor="@color/radiopage_blue"
                         android:textSize="@dimen/textsize_twelve" />
 
@@ -492,7 +488,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="@dimen/activity_margin_five"
-                        android:text="今日推荐歌曲" />
+                        android:text="@string/today" />
 
                     <View
                         android:layout_width="@dimen/zero"
@@ -555,7 +551,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="@dimen/activity_margin_five"
-                        android:text="T榜 - 全球原创音乐现金榜" />
+                        android:text="@string/t" />
 
 
                 </LinearLayout>
@@ -581,7 +577,7 @@
                     android:numColumns="3"
                     android:scrollbars="none"
                     android:stretchMode="columnWidth"
-                    android:verticalSpacing="10dp" />
+                    android:verticalSpacing="@dimen/mymusic_padding_ten" />
             </LinearLayout>
 
             <View
@@ -613,7 +609,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="@dimen/activity_margin_five"
-                        android:text="最热MV推荐" />
+                        android:text="@string/mv" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -637,7 +633,7 @@
                     android:numColumns="3"
                     android:scrollbars="none"
                     android:stretchMode="columnWidth"
-                    android:verticalSpacing="10dp" />
+                    android:verticalSpacing="@dimen/mymusic_padding_ten" />
             </LinearLayout>
 
             <View
@@ -669,7 +665,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="@dimen/activity_margin_five"
-                        android:text="乐播节目" />
+                        android:text="@string/happy" />
 
                     <View
                         android:layout_width="@dimen/zero"
@@ -708,7 +704,7 @@
                     android:numColumns="3"
                     android:scrollbars="none"
                     android:stretchMode="columnWidth"
-                    android:verticalSpacing="10dp" />
+                    android:verticalSpacing="@dimen/mymusic_padding_ten" />
             </LinearLayout>
 
             <View
@@ -740,7 +736,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="@dimen/activity_margin_five"
-                        android:text="专栏" />
+                        android:text="@string/special" />
 
                 </LinearLayout>
             </LinearLayout>

@@ -13,7 +13,7 @@ import com.jingjiang.baidumusic.widget.eventbus.IntegerEvent;
 import com.jingjiang.baidumusic.inmusiclibrary.adapter.RankListAdapter;
 import com.jingjiang.baidumusic.inmusiclibrary.bean.RankListData;
 import com.jingjiang.baidumusic.widget.myinterface.OnFragmentSkipListener;
-import com.jingjiang.baidumusic.widget.UrlTool;
+import com.jingjiang.baidumusic.widget.othertool.UrlTool;
 import com.jingjiang.baidumusic.widget.single.VolleySingle;
 
 import org.greenrobot.eventbus.EventBus;
@@ -36,6 +36,7 @@ public class RankListFragment extends BaseFragment implements AdapterView.OnItem
     protected int initLayout() {
         return R.layout.music_f_ranklist;
     }
+
     /*注意注意   必须要依附  否则空指针*/
 
     /**

@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/mymusic_padding_ten"
                 android:paddingTop="2dp"
-                android:text="热门歌手"
+                android:text="@string/hot_singer"
                 android:textColor="@color/white"
                 android:textSize="@dimen/textsize_fifteen" />
         </LinearLayout>

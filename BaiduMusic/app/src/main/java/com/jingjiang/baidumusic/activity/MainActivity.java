@@ -13,6 +13,14 @@ import android.widget.TextView;
 
 import com.jingjiang.baidumusic.R;
 import com.jingjiang.baidumusic.base.BaseActivity;
+import com.jingjiang.baidumusic.fragment.MyMusicFragment;
+import com.jingjiang.baidumusic.inmusicrecommend.fragment.AllSingerDifferentSingerFragment;
+import com.jingjiang.baidumusic.inmymusic.fragment.DownloadFragment;
+import com.jingjiang.baidumusic.inmymusic.fragment.ILkeFragment;
+import com.jingjiang.baidumusic.inmymusic.fragment.LocalMusicFragment;
+import com.jingjiang.baidumusic.inmymusic.fragment.MyKSongFragment;
+import com.jingjiang.baidumusic.inmymusic.fragment.RecentFragment;
+import com.jingjiang.baidumusic.widget.eventbus.PauseEvent;
 import com.jingjiang.baidumusic.widget.eventbus.PlaySongEvent;
 import com.jingjiang.baidumusic.inmusiclibrary.fragment.RadioFragment;
 import com.jingjiang.baidumusic.inmusiclibrary.fragment.RankListDetailFragment;
@@ -25,14 +33,13 @@ import com.jingjiang.baidumusic.inmusicrecommend.fragment.AllSingerMoreFragment;
 import com.jingjiang.baidumusic.inmusicrecommend.fragment.HappyMoreFragment;
 import com.jingjiang.baidumusic.inmusicrecommend.fragment.NewCDMoreFragment;
 import com.jingjiang.baidumusic.widget.service.PlaySongService;
-import com.jingjiang.baidumusic.showsong.ShowSongActivity;
+import com.jingjiang.baidumusic.showsong.activity.ShowSongActivity;
 import com.jingjiang.baidumusic.widget.myinterface.OnFragmentSkipListener;
+import com.squareup.picasso.Picasso;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
-
-import it.sephiroth.android.library.picasso.Picasso;
 
 
 /**
@@ -43,6 +50,7 @@ public class MainActivity extends BaseActivity implements OnFragmentSkipListener
     private SongMenuFragment songMenuFragment;
     private RecommendFragment recommendFragment;
     private AllSingerFragment allSongerFragment;
+    private MyMusicFragment myMusicFragment;
     private RadioFragment radioFragment;
     private ImageView iconIv, songMenuIv, playIv, pauseIv, nextIv;
     private TextView titleTv, nameTv;
@@ -104,6 +112,7 @@ public class MainActivity extends BaseActivity implements OnFragmentSkipListener
         bindService(serviceIntent, connection, BIND_AUTO_CREATE);
         initPlaySong();
 
+
     }
 
     /**
@@ -145,6 +154,8 @@ public class MainActivity extends BaseActivity implements OnFragmentSkipListener
 
         allSongerFragment = new AllSingerFragment();
         allSongerFragment.setAllSongerListener(this);
+        myMusicFragment = new MyMusicFragment();
+        myMusicFragment.setSkipListener(this);
 
     }
 
@@ -154,27 +165,51 @@ public class MainActivity extends BaseActivity implements OnFragmentSkipListener
         FragmentTransaction transaction = manager.beginTransaction().setCustomAnimations(R.anim.activity_in, R.anim.activity_out).addToBackStack(null);
         switch (witch) {
             case 1:
-                transaction.replace(R.id.activity_main_framelayout, new RankListDetailFragment()).commit();
+                transaction.replace(R.id.activity_main_framelayout, new RankListDetailFragment());
                 break;
             case 2:
-                transaction.replace(R.id.activity_main_framelayout, new SongMenuDetailFragment()).commit();
+                transaction.replace(R.id.activity_main_framelayout, new SongMenuDetailFragment());
                 break;
             case 3:
-                transaction.replace(R.id.activity_main_framelayout, new AllSingerFragment()).commit();
+                transaction.replace(R.id.activity_main_framelayout, new AllSingerFragment());
                 break;
             case 4:
-                transaction.replace(R.id.activity_main_framelayout, new AllSingerMoreFragment()).commit();
+                transaction.replace(R.id.activity_main_framelayout, new AllSingerMoreFragment());
                 break;
             case 5:
-                transaction.replace(R.id.activity_main_framelayout, new NewCDMoreFragment()).commit();
+                transaction.replace(R.id.activity_main_framelayout, new NewCDMoreFragment());
                 break;
             case 6:
-                transaction.replace(R.id.activity_main_framelayout, new HappyMoreFragment()).commit();
+                transaction.replace(R.id.activity_main_framelayout, new HappyMoreFragment());
                 break;
-
+            case 7:
+                transaction.replace(R.id.activity_main_framelayout, new ILkeFragment());
+                break;
+            case 8:
+                transaction.replace(R.id.activity_main_framelayout, new LocalMusicFragment());
+                break;
+            case 9:
+                transaction.replace(R.id.activity_main_framelayout, new RecentFragment());
+                break;
+            case 10:
+                transaction.replace(R.id.activity_main_framelayout, new DownloadFragment());
+                break;
+            case 11:
+                transaction.replace(R.id.activity_main_framelayout, new MyKSongFragment());
+                break;
+            case 12:
+                transaction.replace(R.id.activity_main_framelayout, new AllSingerDifferentSingerFragment());
+                break;
         }
+        transaction.commit();
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void getPause(PauseEvent event) {
+        int pause = event.getStop();
+        pauseIv.setVisibility(View.VISIBLE);
+        playIv.setVisibility(View.GONE);
+    }
 
     @Override
     public void onClick(View v) {
@@ -188,11 +223,13 @@ public class MainActivity extends BaseActivity implements OnFragmentSkipListener
                         playSongService.mediaPlayer.stop();
                     }
                 });
-
+                myBinder.start();//播放歌曲
                 break;
             case R.id.play_music_bar_pause_iv:
+
                 playIv.setVisibility(View.VISIBLE);
                 pauseIv.setVisibility(View.GONE);
+                myBinder.pause();//暂停歌曲
                 break;
             case R.id.play_music_bar_songmenu_iv://歌单
                 break;
@@ -202,6 +239,7 @@ public class MainActivity extends BaseActivity implements OnFragmentSkipListener
                 Intent intent = new Intent(this, ShowSongActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.activity_up, R.anim.activity_no_active);
+
 
                 break;
         }

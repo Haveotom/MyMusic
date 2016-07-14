@@ -24,7 +24,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="国语"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -45,18 +44,27 @@
             android:src="@mipmap/fanhui" />
     </RelativeLayout>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/activity_music_radio_more_detail_viewpager"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/zero"
-        android:layout_marginLeft="@dimen/height_forty"
-        android:layout_marginRight="@dimen/height_forty"
         android:layout_weight="1"
-        android:clipChildren="false" />
+        android:clipChildren="false">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_music_radio_more_detail_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_fifty"
+            android:layout_marginRight="@dimen/margin_fifty"
+            android:clipChildren="false"/>
+        <!--为了让左右的viewpager显示-->
+
+    </RelativeLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_sixty"
+        android:layout_height="@dimen/height_eighty"
         android:layout_marginLeft="@dimen/activity_margin_fifteen"
         android:layout_marginRight="@dimen/activity_margin_fifteen"
         android:orientation="horizontal"

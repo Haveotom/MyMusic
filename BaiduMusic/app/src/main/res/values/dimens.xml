@@ -44,6 +44,12 @@
     <dimen name="margin_six">6dp</dimen>
     <dimen name="height_twenty_two">22dp</dimen>
     <dimen name="hundred_fifty">150dp</dimen>
+    <dimen name="textsize_seventeen">17sp</dimen>
 
 
+    <dimen name="zero_point_five" >0.5dp</dimen>
+    <dimen name="one">1dp</dimen>
+    <dimen name="two_hundred_twenty">220dp</dimen>
+    <dimen name="thousands">1000dp</dimen>
+    <dimen name="one_hundred_thirty">130dp</dimen>
 </resources>

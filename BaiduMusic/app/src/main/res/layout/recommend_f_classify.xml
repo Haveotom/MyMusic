@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:background="@color/blue"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/music_recommend_classify_fanhui_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin_five"
+                android:src="@mipmap/fanhui" />
+
+            <TextView
+                android:id="@+id/activity_individual_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mymusic_padding_ten"
+                android:paddingTop="2dp"
+                android:text="@string/classify"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_fifteen" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_three_dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_three_dp"
+                    android:layout_marginRight="@dimen/margin_three_dp"
+                    android:layout_marginTop="@dimen/activity_margin_five"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_classify_img01">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/qingge"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_three_dp"
+                    android:layout_marginRight="@dimen/margin_three_dp"
+                    android:layout_marginTop="@dimen/activity_margin_five"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_classify_img02">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/honggge"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_three_dp"
+                    android:layout_marginRight="@dimen/margin_three_dp"
+                    android:layout_marginTop="@dimen/activity_margin_five"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_classify_img03">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/jingbao"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_three_dp"
+                    android:layout_marginRight="@dimen/margin_three_dp"
+                    android:layout_marginTop="@dimen/activity_margin_five"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_classify_img04">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/tianlai"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_three_dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_three_dp"
+                    android:layout_marginRight="@dimen/margin_three_dp"
+                    android:layout_marginTop="@dimen/activity_margin_five"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_classify_img05">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/oumei"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_three_dp"
+                    android:layout_marginRight="@dimen/margin_three_dp"
+                    android:layout_marginTop="@dimen/activity_margin_five"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_classify_img06">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/oumei_"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_three_dp"
+                    android:layout_marginRight="@dimen/margin_three_dp"
+                    android:layout_marginTop="@dimen/activity_margin_five"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_classify_img07">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/internet_song"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_three_dp"
+                    android:layout_marginRight="@dimen/margin_three_dp"
+                    android:layout_marginTop="@dimen/activity_margin_five"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_classify_img08">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/minge"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

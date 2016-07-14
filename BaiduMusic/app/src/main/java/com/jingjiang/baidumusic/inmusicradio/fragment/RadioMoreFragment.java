@@ -13,7 +13,7 @@ import com.jingjiang.baidumusic.base.BaseFragment;
 import com.jingjiang.baidumusic.inmusicradio.activity.RadioMoreDetailActivity;
 import com.jingjiang.baidumusic.inmusicradio.adapter.RadioMorePageAdapter;
 import com.jingjiang.baidumusic.inmusicradio.data.RadioMoreData;
-import com.jingjiang.baidumusic.widget.UrlTool;
+import com.jingjiang.baidumusic.widget.othertool.UrlTool;
 import com.jingjiang.baidumusic.widget.single.VolleySingle;
 
 /**
@@ -31,6 +31,7 @@ public class RadioMoreFragment extends BaseFragment implements AdapterView.OnIte
     //写一个生成指定Fragment的方法
     public static RadioMoreFragment getFragment(int position) {
         RadioMoreFragment radioMoreFragment = new RadioMoreFragment();
+        //Bundle在本类中传值
         Bundle bundle = new Bundle();
         bundle.putInt(POS, position);
         radioMoreFragment.setArguments(bundle);

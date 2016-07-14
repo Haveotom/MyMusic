@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/mymusic_margin_twenty"
+            android:orientation="vertical">
+            <!--跑马灯效果-->
+            <!--android:ellipsize="marquee"  跑马灯效果
+                android:focusable="true"  由于在java中没有写任何方法  所以让其获得焦点
+                android:marqueeRepeatLimit="marquee_forever"  跑马灯重复次数
+                android:focusableInTouchMode="true"
+                android:scrollHorizontally="true"
+                singleLine = "true 只有单行才可能有跑马灯效果-->
+
+            <TextView
+                android:id="@+id/item_music_ilike_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_normal_most"
+                android:textSize="@dimen/textsize_thirteen" />
+
+            <TextView
+                android:id="@+id/item_music_ilike_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_normal_least"
+                android:textSize="@dimen/textsize_ten_sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/item_music_ilike_more_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/recommend_more" />
+
+    </RelativeLayout>
+
+</LinearLayout>

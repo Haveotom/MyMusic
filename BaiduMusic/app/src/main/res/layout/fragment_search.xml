@@ -43,9 +43,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:visibility="gone"
                 android:layout_marginRight="@dimen/activity_margin_five"
-                android:src="@mipmap/search_img_correct" />
+                android:src="@mipmap/search_img_correct"
+                android:visibility="gone" />
 
 
         </RelativeLayout>
@@ -60,38 +60,62 @@
             android:src="@mipmap/search_img1" />
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/fragment_search_before_ll"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_forty"
-        android:layout_marginLeft="@dimen/activity_margin_fifteen"
-        android:gravity="center_vertical"
-        android:text="@string/fragment_search_hot"
-        android:textColor="@color/black_normal" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <GridView
-        android:id="@+id/fragment_search_choice_gridview"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_forty"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:gravity="center_vertical"
+            android:text="@string/fragment_search_hot"
+            android:textColor="@color/black_normal" />
+
+        <GridView
+            android:id="@+id/fragment_search_choice_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mymusic_padding_ten"
+            android:layout_marginRight="@dimen/mymusic_padding_ten"
+            android:fadeScrollbars="false"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"></GridView>
+
+        <View
+            style="@style/line_all"
+            android:layout_marginBottom="@dimen/mymusic_margin_twenty"
+            android:layout_marginTop="@dimen/mymusic_margin_twenty" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_five"
+            android:gravity="center"
+            android:text="@string/none_history"
+            android:textColor="@color/black_normal_most"
+            android:textSize="@dimen/textsize_fifteen" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_main_to_search_listview_ll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/mymusic_padding_ten"
-        android:layout_marginRight="@dimen/mymusic_padding_ten"
-        android:fadeScrollbars="false"
-        android:numColumns="3"
-        android:scrollbars="none"
-        android:stretchMode="columnWidth"></GridView>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:visibility="gone">
 
-    <View
-        style="@style/line_all"
-        android:layout_marginBottom="@dimen/mymusic_margin_twenty"
-        android:layout_marginTop="@dimen/mymusic_margin_twenty" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_margin_five"
-        android:gravity="center"
-        android:text="无搜索历史记录"
-        android:textColor="@color/black_normal_most"
-        android:textSize="@dimen/textsize_fifteen" />
+        <ListView
+            android:id="@+id/fragment_main_to_search_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_marginLeft="@dimen/mymusic_padding_ten"
+            android:layout_marginRight="@dimen/mymusic_padding_ten"></ListView>
+    </LinearLayout>
 
 
 </LinearLayout>

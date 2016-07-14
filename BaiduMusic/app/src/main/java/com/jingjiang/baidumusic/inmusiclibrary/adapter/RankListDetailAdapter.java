@@ -1,19 +1,26 @@
 package com.jingjiang.baidumusic.inmusiclibrary.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.jingjiang.baidumusic.R;
+import com.jingjiang.baidumusic.base.MyApplication;
 import com.jingjiang.baidumusic.inmusiclibrary.bean.RankListDetailData;
+import com.jingjiang.baidumusic.widget.eventbus.TitleEvent;
+import com.jingjiang.baidumusic.widget.myinterface.OnClickMoreListener;
 import com.jingjiang.baidumusic.widget.single.SingleQueue;
 
-import it.sephiroth.android.library.picasso.Picasso;
+import org.greenrobot.eventbus.EventBus;
+
 
 /**
  * Created by dllo on 16/7/1.
@@ -21,6 +28,11 @@ import it.sephiroth.android.library.picasso.Picasso;
 public class RankListDetailAdapter extends BaseAdapter {
     private Context context;
     private RankListDetailData detailData;
+    private OnClickMoreListener clickMoreListener;
+
+    public void setClickMoreListener(OnClickMoreListener clickMoreListener) {
+        this.clickMoreListener = clickMoreListener;
+    }
 
     public void setDetailData(RankListDetailData detailData) {
         this.detailData = detailData;
@@ -47,7 +59,7 @@ public class RankListDetailAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         RankListDetailViewHolder holder = null;
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.item_music_ranklist_detail, parent, false);
@@ -72,10 +84,21 @@ public class RankListDetailAdapter extends BaseAdapter {
         }
 
         holder.numTv.setText(detailData.getSong_list().get(position).getRank());
-
         SingleQueue.getSingleQueue(context).getImageLoader().get(
                 detailData.getSong_list().get(position).getPic_small(),
-                ImageLoader.getImageListener(holder.iconIv,R.mipmap.view_loading,R.mipmap.view_loading));
+                ImageLoader.getImageListener(holder.iconIv, R.mipmap.view_loading, R.mipmap.view_loading));
+
+        //设置点击传到fragment中
+        final RankListDetailViewHolder finalHolder = holder;
+        holder.moreIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String title = finalHolder.titleTv.getText().toString();
+                clickMoreListener.onClickMore(title, position);
+                Log.d("RankListDetailAdapter", "fa" + title);
+                EventBus.getDefault().post(new TitleEvent(title));
+            }
+        });
 
 
         return convertView;
@@ -83,7 +106,7 @@ public class RankListDetailAdapter extends BaseAdapter {
 
     class RankListDetailViewHolder {
         TextView titleTv, nameTv, numTv;
-        ImageView iconIv, rankIv;
+        ImageView iconIv, rankIv, moreIv;
 
         public RankListDetailViewHolder(View view) {
             titleTv = (TextView) view.findViewById(R.id.item_music_ranklist_detail_title_tv);
@@ -91,6 +114,7 @@ public class RankListDetailAdapter extends BaseAdapter {
             iconIv = (ImageView) view.findViewById(R.id.item_music_ranklist_detail_icon_iv);
             numTv = (TextView) view.findViewById(R.id.item_music_ranklist_detail_num_tv);
             rankIv = (ImageView) view.findViewById(R.id.item_music_ranklist_detail_sanjiao_iv);
+            moreIv = (ImageView) view.findViewById(R.id.item_music_ranklist_detail_more_iv);
 
 
         }

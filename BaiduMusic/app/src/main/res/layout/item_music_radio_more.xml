@@ -24,7 +24,7 @@
             android:layout_alignBottom="@id/item_music_radio_more_picture_iv"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/margin_eight"
-            android:text="语言"
+            android:text="@string/langrage"
             android:textColor="@color/littleBlue"
             android:textSize="@dimen/textsize_thirteen" />
     </RelativeLayout>

@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_eight"
                 android:gravity="center"
-                android:text="电脑导歌" />
+                android:text="@string/computer_song" />
 
         </LinearLayout>
 
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_eight"
                 android:gravity="center"
-                android:text="成为白金VIP" />
+                android:text="@string/vipbaijin" />
 
         </LinearLayout>
 
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_eight"
                 android:gravity="center"
-                android:text="雷石点唱机" />
+                android:text="@string/leidian_song" />
 
         </LinearLayout>
 

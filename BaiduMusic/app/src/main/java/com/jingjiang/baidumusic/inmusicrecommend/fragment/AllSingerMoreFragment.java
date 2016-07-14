@@ -10,6 +10,7 @@ import com.jingjiang.baidumusic.R;
 import com.jingjiang.baidumusic.base.BaseFragment;
 import com.jingjiang.baidumusic.inmusicrecommend.adapter.AllSingerMoreAdapter;
 import com.jingjiang.baidumusic.inmusicrecommend.data.AllSingerMoreData;
+import com.jingjiang.baidumusic.widget.othertool.UrlTool;
 import com.jingjiang.baidumusic.widget.single.VolleySingle;
 
 /**
@@ -30,13 +31,13 @@ public class AllSingerMoreFragment extends BaseFragment implements View.OnClickL
         bindView(R.id.music_recommend_happy_more_fanhui_ll).setOnClickListener(this);
         gridView = bindView(R.id.music_recommend_happy_more_gridview);
         adapter = new AllSingerMoreAdapter(getContext());
-       gridView.setOnItemClickListener(this);
+        gridView.setOnItemClickListener(this);
 
     }
 
     @Override
     protected void initData() {
-        VolleySingle.getInstance()._addRequest("http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.8.0.1&channel=xiaomi&operator=2&method=baidu.ting.artist.getList&format=json&offset=0&limit=48&order=1&area=0&sex=0",
+        VolleySingle.getInstance()._addRequest(UrlTool.ALLSINGER_MORE,
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {

@@ -14,13 +14,16 @@ import com.jingjiang.baidumusic.adapter.MainAdapter;
 import com.jingjiang.baidumusic.base.BaseFragment;
 import com.jingjiang.baidumusic.fragment.KSongFragment;
 import com.jingjiang.baidumusic.fragment.LiveFragment;
-import com.jingjiang.baidumusic.fragment.MyMusicFragment;
 import com.jingjiang.baidumusic.fragment.MusicLibraryFragment;
+import com.jingjiang.baidumusic.fragment.MyMusicFragment;
 import com.jingjiang.baidumusic.fragment.SearchFragment;
+import com.jingjiang.baidumusic.inmymusic.data.SingleSongData;
 import com.jingjiang.baidumusic.widget.myinterface.OnDrawerListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.bmob.v3.BmobUser;
 
 public class MainFragment extends BaseFragment implements View.OnClickListener, OnDrawerListener {
     private MainAdapter adapter;
@@ -58,8 +61,14 @@ public class MainFragment extends BaseFragment implements View.OnClickListener, 
         //关闭滑动模式
         searchDrawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         initDrawerFragment();
+        SingleSongData singleSongData = BmobUser.getCurrentUser(getContext(), SingleSongData.class);
+        if (singleSongData != null) {
+            individualIv.setImageResource(R.mipmap.login_head);
+
+        }
 
     }
+
 
     //在抽屉中套一个fragment,替换占位布局
     private void initDrawerFragment() {
@@ -98,6 +107,7 @@ public class MainFragment extends BaseFragment implements View.OnClickListener, 
                     liveFragment.setScroll();
                 }
             }
+
             @Override
             public void onPageScrollStateChanged(int state) {
             }
@@ -134,4 +144,8 @@ public class MainFragment extends BaseFragment implements View.OnClickListener, 
         searchDrawer.openDrawer(GravityCompat.END);
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 }

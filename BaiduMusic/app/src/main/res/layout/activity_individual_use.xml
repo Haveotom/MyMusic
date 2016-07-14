@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/mymusic_padding_ten"
                 android:paddingTop="2dp"
-                android:text="精品应用"
+                android:text="@string/application"
                 android:textColor="@color/white"
                 android:textSize="@dimen/textsize_fifteen" />
         </LinearLayout>

@@ -16,12 +16,12 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="220dp">
+                android:layout_height="@dimen/two_hundred_twenty">
 
                 <ImageView
                     android:id="@+id/detail_music_songmenu_icon_iv"
                     android:layout_width="match_parent"
-                    android:layout_height="220dp" />
+                    android:layout_height="@dimen/two_hundred_twenty" />
 
                 <TextView
                     android:id="@+id/detail_music_songmenu_title_tv"
@@ -99,7 +99,6 @@
                     android:layout_above="@id/detail_music_songmenu_little_word_tv"
                     android:layout_alignLeft="@id/detail_music_songmenu_little_word_tv"
                     android:layout_marginBottom="@dimen/activity_margin_five"
-                    android:text="name"
                     android:textColor="@color/white"
                     android:textSize="@dimen/textsize_fifteen" />
             </RelativeLayout>

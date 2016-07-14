@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--属性-->
+<resources>
+    <declare-styleable name="LyricView">
+        <!--维,尺寸-->
+        <attr name="textsize" format="dimension" />
+        <attr name="divider_Height" format="dimension" />
+        <!--参考  参照-->
+        <attr name="textcolor_normal" format="reference|color" />
+        <attr name="textcolor_current" format="reference|color" />
+        <attr name="animation_duration" format="integer" />
+    </declare-styleable>
+</resources>

@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import com.jingjiang.baidumusic.R;
 import com.jingjiang.baidumusic.inmusiclibrary.bean.SongMenuData;
+import com.squareup.picasso.Picasso;
 
-import it.sephiroth.android.library.picasso.Picasso;
 
 /**
  * Created by dllo on 16/6/22.

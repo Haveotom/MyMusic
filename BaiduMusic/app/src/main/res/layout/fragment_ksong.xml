@@ -10,7 +10,7 @@
 
     <android.support.design.widget.NavigationView
         android:layout_width="@dimen/drawer_width_full"
-        android:layout_height="1000dp"
+        android:layout_height="@dimen/thousands"
         android:layout_gravity="right"
         android:fitsSystemWindows="true">
 

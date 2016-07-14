@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,27 +16,32 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.jingjiang.baidumusic.R;
 import com.jingjiang.baidumusic.base.BaseFragment;
-import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.ClassifyAdapter;
-import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.HappyAdapter;
-import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.HotMVAdapter;
-import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.HotSellAdapter;
-import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.NewCDAdapter;
-import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.RecyclerAdapter;
-import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.SpecialAdapter;
-import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.TAdapter;
-import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.TheSongMenuAdapter;
-import com.jingjiang.baidumusic.inmusiclibrary.adapterrecommend.TodayAdapter;
+import com.jingjiang.baidumusic.inmusiclibrary.adapter.recommend.ClassifyAdapter;
+import com.jingjiang.baidumusic.inmusiclibrary.adapter.recommend.HappyAdapter;
+import com.jingjiang.baidumusic.inmusiclibrary.adapter.recommend.HotMVAdapter;
+import com.jingjiang.baidumusic.inmusiclibrary.adapter.recommend.HotSellAdapter;
+import com.jingjiang.baidumusic.inmusiclibrary.adapter.recommend.NewCDAdapter;
+import com.jingjiang.baidumusic.inmusiclibrary.adapter.recommend.RecyclerAdapter;
+import com.jingjiang.baidumusic.inmusiclibrary.adapter.recommend.SpecialAdapter;
+import com.jingjiang.baidumusic.inmusiclibrary.adapter.recommend.TAdapter;
+import com.jingjiang.baidumusic.inmusiclibrary.adapter.recommend.TheSongMenuAdapter;
+import com.jingjiang.baidumusic.inmusiclibrary.adapter.recommend.TodayAdapter;
 import com.jingjiang.baidumusic.inmusiclibrary.bean.RecommendData;
+import com.jingjiang.baidumusic.widget.eventbus.SongMenuDetailEvent;
+import com.jingjiang.baidumusic.widget.threadpool.MyThreadPool;
 import com.jingjiang.baidumusic.widget.view.MyGridView;
 import com.jingjiang.baidumusic.widget.view.NoScrollListView;
 import com.jingjiang.baidumusic.widget.myinterface.OnFragmentSkipListener;
 import com.jingjiang.baidumusic.widget.myinterface.OnClickSomeListener;
-import com.jingjiang.baidumusic.widget.UrlTool;
+import com.jingjiang.baidumusic.widget.othertool.UrlTool;
 import com.jingjiang.baidumusic.widget.single.VolleySingle;
+import com.squareup.picasso.Picasso;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
+import java.util.concurrent.ThreadPoolExecutor;
 
-import it.sephiroth.android.library.picasso.Picasso;
 
 /**
  * Created by dllo on 16/6/21.
@@ -180,31 +184,26 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
                         specialAdapter.setData(response);
 
                         for (int i = 0; i < response.getModule().size(); i++) {
-                            String key = response.getModule().get(i).getKey();
-                            if (key == "diy") {
+                            int key = response.getModule().get(i).getStyle();
+                            if (key == 15) {
                                 Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(songMenuIv);
-                            } else if (key == "mix_1") {
+                            } else if (key == 9) {
                                 Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(newCDIv);
-                            } else if (key == "mix_22") {
+                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(hotMVIv);
+                            } else if (key == 8) {
                                 Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(hotSellIv);
-
-                            } else if (key == "scene") {
-                                Log.d("RecommendFragment", key);
-                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(videoIv);
-
-                            } else if (key == "recsong") {
-                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(todayIv);
-
-                            } else if (key == "mix_9") {
                                 Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(tIv);
 
-                            } else if (key == "mix_5") {
-                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(hotMVIv);
+                            } else if (key == 2) {
+                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(videoIv);
 
-                            } else if (key == "radio") {
+                            } else if (key == 10) {
+                                Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(todayIv);
+
+                            } else if (key == 14) {
                                 Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(happyIv);
 
-                            } else if (key == "mod_7") {
+                            } else if (key == 11) {
                                 Picasso.with(getContext()).load(response.getModule().get(i).getPicurl()).resize(25, 25).into(specialIv);
 
                             }
@@ -246,6 +245,18 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
                 }
             }
         });
+        //歌单推荐
+        songMenuGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (recommendSkipListener != null) {
+                    recommendSkipListener.toSkipFragment(2);
+                    EventBus.getDefault().post(new SongMenuDetailEvent(recommendData.getResult().getDiy().getResult().get(position).getListid()));
+                }
+            }
+        });
+
+
     }
 
     /**
@@ -285,7 +296,8 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
             }
         });
         //开启线程去执行轮播
-        new Thread(new Runnable() {
+        final ThreadPoolExecutor threadPoolExecutor = MyThreadPool.getOurInstance().getThreadPoolExecutor();
+        threadPoolExecutor.execute(new Runnable() {
             @Override
             public void run() {
                 while (threadAlive) {
@@ -305,7 +317,8 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
                 }
 
             }
-        }).start();
+        });
+
         //当用户点击的时候就不会再发轮播图了
         //轮播图就会暂停轮播
         viewPager.setOnTouchListener(new View.OnTouchListener() {
@@ -337,7 +350,6 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
                 setImageBackground(position);
 
             }
-
             @Override
             public void onPageScrollStateChanged(int state) {
 
@@ -407,4 +419,5 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
         }
 
     }
+
 }

@@ -100,20 +100,27 @@
         </LinearLayout>
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@mipmap/radio_other" />
+
     <LinearLayout
         android:id="@+id/music_radio_more_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_margin_fifteen"
         android:layout_marginRight="@dimen/activity_margin_fifteen"
-        android:background="@drawable/linearlayout_frame">
+        android:background="@drawable/linearlayout_frame"
+        android:layout_marginTop="@dimen/mymusic_padding_ten"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_forty"
             android:layout_gravity="bottom"
             android:gravity="center"
-            android:text="更多电台分类"
+            android:text="@string/more_classify"
             android:textColor="@color/black_normal_least"
             android:textSize="@dimen/textsize_fifteen" />
     </LinearLayout>

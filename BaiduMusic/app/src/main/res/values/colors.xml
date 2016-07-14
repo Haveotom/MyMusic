@@ -24,5 +24,9 @@
     <color name="green_more">#00c3bb</color>
     <color name="radiopage_red">#e23544</color>
     <color name="radiopage_blue">#00aafa</color>
-
+    <color name="login_text">#173782</color>
+    <color name="login_button">#95c4ea</color>
+    <color name="login_button_press">#5599ff</color>
+    <color name="video_gray">#CC282828</color>
+    <color name="alpha">#e0000000</color>
 </resources>

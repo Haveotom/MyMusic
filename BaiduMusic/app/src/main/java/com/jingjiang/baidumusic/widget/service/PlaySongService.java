@@ -5,13 +5,17 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Binder;
 import android.os.Build;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.widget.RemoteViews;
 
 import com.android.volley.RequestQueue;
@@ -22,16 +26,20 @@ import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.jingjiang.baidumusic.R;
 import com.jingjiang.baidumusic.widget.eventbus.PlaySongEvent;
+import com.jingjiang.baidumusic.widget.eventbus.SeekBarTimeEvent;
+import com.jingjiang.baidumusic.widget.eventbus.StartEvent;
+import com.jingjiang.baidumusic.widget.eventbus.PauseEvent;
 import com.jingjiang.baidumusic.widget.eventbus.StringEvent;
 import com.jingjiang.baidumusic.widget.eventbus.TypeEvent;
 import com.jingjiang.baidumusic.inmusiclibrary.bean.EverySongData;
-import com.jingjiang.baidumusic.widget.myinterface.OnClickSomeListener;
+import com.jingjiang.baidumusic.widget.threadpool.MyThreadPool;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.IOException;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * Created by dllo on 16/7/1.
@@ -46,12 +54,12 @@ public class PlaySongService extends Service {
     //启动服务才会调用此生命周期
     public EverySongData data;
     public MediaPlayer mediaPlayer = new MediaPlayer();
-    private OnClickSomeListener clickSomeListener;
 
-    public void setClickSomeListener(OnClickSomeListener clickSomeListener) {
-        this.clickSomeListener = clickSomeListener;
-    }
+    /*第二步广播*/
+    public MyBroadcastReceiver broadcastReceiver;
+    private long current, allTime;
 
+    /*****************************************/
     @Override
     public void onCreate() {
         EventBus.getDefault().register(this);
@@ -60,13 +68,11 @@ public class PlaySongService extends Service {
         //所以所有的耗时操作,都需要放到子线程中
         //不能在子线程中添加吐司,因为吐司是在UI中界面显示,所以必然是在主线程中
 
-//        Intent intent = new Intent();
-//        intent.setClass(this, ShowSongActivity.class);
-//        intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
-//        startService(intent);
 
+        /*广播实例化*/
+        broadcastReceiver = new MyBroadcastReceiver();
+        Register();//注册广播的方法
     }
-//http://tingapi.ting.baidu.com/v1/restserver/ting?from=webapp_music&method=baidu.ting.song.play&format=json&callback=&songid=242078437&_=1413017198449";
 
 
     @Subscribe(threadMode = ThreadMode.MAIN)
@@ -75,6 +81,7 @@ public class PlaySongService extends Service {
         String leftUrl = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=webapp_music&method=baidu.ting.song.play&format=json&callback=&songid=";
         String rightUrl = "&_=1413017198449";
         String songUrl = leftUrl + songId + rightUrl;
+        Log.d("PlaySongService", songId);
         /*原生方法*/
         RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(songUrl, new Response.Listener<String>() {
@@ -94,9 +101,10 @@ public class PlaySongService extends Service {
         queue.add(stringRequest);
 
     }
+    //http://tingapi.ting.baidu.com/v1/restserver/ting?from=webapp_music&method=baidu.ting.song.play&format=json&callback=&songid=107596984&_=1413017198449
 
-    //接到showSongActivity传来的信息,然后再会给它
 
+    /*接到showSongActivity传来的信息,然后再会给它*/
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void getType(TypeEvent event) {
         String type = event.getType();
@@ -107,16 +115,6 @@ public class PlaySongService extends Service {
     public void initSend() {
         //eventbus  传值
         EventBus.getDefault().post(new PlaySongEvent(data));
-
-//        //传值
-//        Intent intent = new Intent();
-//        //设置传播的键值对:
-//        intent.putExtra("information", data.getSonginfo().getTitle());
-//        Log.d("PlaySongService", data.getSonginfo().getTitle());
-//        intent.setAction(ACCESSIBILITY_SERVICE);
-//        //发送广播
-//        sendBroadcast(intent);
-
     }
 
     private void initPlaySong() {
@@ -128,6 +126,7 @@ public class PlaySongService extends Service {
                 public void onPrepared(MediaPlayer mp) {
                     mediaPlayer.start();//开始
                     showMusicNotification();//notification
+                    initThread();
                 }
             });
             mediaPlayer.prepareAsync();//异步
@@ -135,6 +134,35 @@ public class PlaySongService extends Service {
             e.printStackTrace();
         }
 
+    }
+
+    private void initThread() {
+        ThreadPoolExecutor threadPool = MyThreadPool.getOurInstance().getThreadPoolExecutor();
+        //向线程池中添加新的任务
+        threadPool.execute(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    while (mediaPlayer.isPlaying()) {
+                        EventBus.getDefault().post(
+                                new SeekBarTimeEvent(mediaPlayer.getCurrentPosition(),
+                                        mediaPlayer.getDuration(),
+                                        data.getSonginfo().getLrclink()));
+                        try {
+                            Thread.sleep(200);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+            }
+        });
+//        //关闭线程池  ,线程池会完成现有的工作  然后关闭
+//        threadPool.shutdown();
+//        //线程池会放弃现有的工作,立刻关闭
+//        threadPool.shutdownNow();
+//
     }
 
 
@@ -162,6 +190,15 @@ public class PlaySongService extends Service {
     //在该类中可以写一些用来操作服务的方法
     //该类的对象,会通过onBinder生命周期return出去
     public class MyBinder extends Binder {
+        public void pause() {
+            mediaPlayer.pause();
+
+        }
+
+        public void start() {
+            mediaPlayer.start();
+        }
+
 
     }
 
@@ -174,6 +211,9 @@ public class PlaySongService extends Service {
         //为Notification设置自定义布局
         RemoteViews views = new RemoteViews(getPackageName(), R.layout.notifycation_song);
         //图片
+        /**
+         *
+         */
         views.setImageViewUri(R.id.notification_play_music_bar_icon_iv, Uri.parse(data.getSonginfo().getPic_small()));
         //标题
         views.setTextViewText(R.id.notification_play_music_bar_title_iv, data.getSonginfo().getTitle());
@@ -183,19 +223,36 @@ public class PlaySongService extends Service {
         PendingIntent pausePendingIntent = PendingIntent.getBroadcast(this, 100, pauseIntent, PendingIntent.FLAG_CANCEL_CURRENT);
         //设置监听
         views.setOnClickPendingIntent(R.id.notification_play_music_bar_pause_iv, pausePendingIntent);
-
         builder.setContent(views);
-
         Notification notification = builder.build();
         manager.notify(0, notification);
 
 
     }
 
+    //第三步  创建一个函数用于注册广播
+    public void Register() {
+        IntentFilter intentFilter = new IntentFilter();
+        //注册广播
+        intentFilter.addAction("SeekBar_Control");
+        registerReceiver(broadcastReceiver, intentFilter);
+
+    }
+
+    //第一步  建立广播接收类
+    class MyBroadcastReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            int progress = intent.getIntExtra("seekBar", 0);
+            mediaPlayer.seekTo(progress);
+
+        }
+    }
 
     @Override
     public void onDestroy() {
         EventBus.getDefault().unregister(this);
+        unregisterReceiver(broadcastReceiver);
         super.onDestroy();
     }
     //http://tingapi.ting.baidu.com/v1/restserver/ting?from=webapp_music&method=baidu.ting.song.play&format=json&callback=&songid=266784254&_=1413017198449

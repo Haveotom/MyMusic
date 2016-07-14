@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_forty"
@@ -85,13 +86,14 @@
     </LinearLayout>
 
     <!--<ListView-->
-        <!--android:id="@+id/music_recommend_allsinger_listview"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="@dimen/width_hundred"></ListView>-->
+    <!--android:id="@+id/music_recommend_allsinger_listview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/width_hundred"></ListView>-->
 
     <View style="@style/line_all" />
 
     <LinearLayout
+        android:id="@+id/music_recommend_allsinger_more_china_man_ll"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_forty"
         android:orientation="horizontal">
@@ -101,7 +103,303 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="华语男歌手"
+            android:text="@string/huayunan"
+            android:textColor="@color/black_normal_most" />
+
+        <LinearLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/activity_margin_fifteen"
+            android:src="@mipmap/right1" />
+    </LinearLayout>
+
+    <View style="@style/line_all" />
+
+    <LinearLayout
+        android:id="@+id/music_recommend_allsinger_more_china_women_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:text="@string/huayunv"
+            android:textColor="@color/black_normal_most" />
+
+        <LinearLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/activity_margin_fifteen"
+            android:src="@mipmap/right1" />
+    </LinearLayout>
+
+    <View style="@style/line_all" />
+
+    <LinearLayout
+        android:id="@+id/music_recommend_allsinger_more_china_club_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:text="@string/huayu_club"
+            android:textColor="@color/black_normal_most" />
+
+        <LinearLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/activity_margin_fifteen"
+            android:src="@mipmap/right1" />
+    </LinearLayout>
+
+    <View style="@style/line_all" />
+
+    <View style="@style/line_all" />
+
+    <LinearLayout
+        android:id="@+id/music_recommend_allsinger_more_europe_man_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:text="@string/oumei_man"
+            android:textColor="@color/black_normal_most" />
+
+        <LinearLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/activity_margin_fifteen"
+            android:src="@mipmap/right1" />
+    </LinearLayout>
+
+    <View style="@style/line_all" />
+
+    <LinearLayout
+        android:id="@+id/music_recommend_allsinger_more_europe_women_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:text="@string/oumei_nv"
+            android:textColor="@color/black_normal_most" />
+
+        <LinearLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/activity_margin_fifteen"
+            android:src="@mipmap/right1" />
+    </LinearLayout>
+
+    <View style="@style/line_all" />
+
+    <LinearLayout
+        android:id="@+id/music_recommend_allsinger_more_europe_club_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:text="@string/oumei_club"
+            android:textColor="@color/black_normal_most" />
+
+        <LinearLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/activity_margin_fifteen"
+            android:src="@mipmap/right1" />
+    </LinearLayout>
+
+    <View style="@style/line_all" />
+
+    <View style="@style/line_all" />
+
+    <LinearLayout
+        android:id="@+id/music_recommend_allsinger_more_korea_man_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:text="@string/han_nan"
+            android:textColor="@color/black_normal_most" />
+
+        <LinearLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/activity_margin_fifteen"
+            android:src="@mipmap/right1" />
+    </LinearLayout>
+
+    <View style="@style/line_all" />
+
+    <LinearLayout
+        android:id="@+id/music_recommend_allsinger_more_korea_women_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:text="@string/han_nv"
+            android:textColor="@color/black_normal_most" />
+
+        <LinearLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/activity_margin_fifteen"
+            android:src="@mipmap/right1" />
+    </LinearLayout>
+
+    <View style="@style/line_all" />
+
+    <LinearLayout
+        android:id="@+id/music_recommend_allsinger_more_korea_club_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:text="@string/han_club"
+            android:textColor="@color/black_normal_most" />
+
+        <LinearLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/activity_margin_fifteen"
+            android:src="@mipmap/right1" />
+    </LinearLayout>
+
+    <View style="@style/line_all" />
+
+    <View style="@style/line_all" />
+
+    <LinearLayout
+        android:id="@+id/music_recommend_allsinger_more_japan_man_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:text="@string/riben_nan"
+            android:textColor="@color/black_normal_most" />
+
+        <LinearLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/activity_margin_fifteen"
+            android:src="@mipmap/right1" />
+    </LinearLayout>
+
+    <View style="@style/line_all" />
+
+    <LinearLayout
+        android:id="@+id/music_recommend_allsinger_more_japan_women_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_margin_fifteen"
+            android:text="@string/riben_nv"
             android:textColor="@color/black_normal_most" />
 
         <LinearLayout
@@ -125,39 +423,12 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/music_recommend_allsinger_more_japan_club_ll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="华语女歌手"
-            android:textColor="@color/black_normal_most" />
-
-        <LinearLayout
-            android:layout_width="@dimen/zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"></LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="@dimen/activity_margin_fifteen"
-            android:src="@mipmap/right1" />
-    </LinearLayout>
-
-    <View style="@style/line_all" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_forty"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="华语组合"
+            android:text="@string/riben_club"
             android:textColor="@color/black_normal_most" />
 
         <LinearLayout
@@ -178,6 +449,7 @@
     <View style="@style/line_all" />
 
     <LinearLayout
+        android:id="@+id/music_recommend_allsinger_more_other_ll"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_forty"
         android:orientation="horizontal">
@@ -187,265 +459,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="欧美男歌手"
-            android:textColor="@color/black_normal_most" />
-
-        <LinearLayout
-            android:layout_width="@dimen/zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"></LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="@dimen/activity_margin_fifteen"
-            android:src="@mipmap/right1" />
-    </LinearLayout>
-
-    <View style="@style/line_all" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_forty"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="欧美女歌手"
-            android:textColor="@color/black_normal_most" />
-
-        <LinearLayout
-            android:layout_width="@dimen/zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"></LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="@dimen/activity_margin_fifteen"
-            android:src="@mipmap/right1" />
-    </LinearLayout>
-
-    <View style="@style/line_all" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_forty"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="欧美组合"
-            android:textColor="@color/black_normal_most" />
-
-        <LinearLayout
-            android:layout_width="@dimen/zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"></LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="@dimen/activity_margin_fifteen"
-            android:src="@mipmap/right1" />
-    </LinearLayout>
-
-    <View style="@style/line_all" />
-
-    <View style="@style/line_all" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_forty"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="韩国男歌手"
-            android:textColor="@color/black_normal_most" />
-
-        <LinearLayout
-            android:layout_width="@dimen/zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"></LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="@dimen/activity_margin_fifteen"
-            android:src="@mipmap/right1" />
-    </LinearLayout>
-
-    <View style="@style/line_all" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_forty"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="韩国女歌手"
-            android:textColor="@color/black_normal_most" />
-
-        <LinearLayout
-            android:layout_width="@dimen/zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"></LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="@dimen/activity_margin_fifteen"
-            android:src="@mipmap/right1" />
-    </LinearLayout>
-
-    <View style="@style/line_all" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_forty"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="韩国组合"
-            android:textColor="@color/black_normal_most" />
-
-        <LinearLayout
-            android:layout_width="@dimen/zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"></LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="@dimen/activity_margin_fifteen"
-            android:src="@mipmap/right1" />
-    </LinearLayout>
-
-    <View style="@style/line_all" />
-
-    <View style="@style/line_all" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_forty"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="日本男歌手"
-            android:textColor="@color/black_normal_most" />
-
-        <LinearLayout
-            android:layout_width="@dimen/zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"></LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="@dimen/activity_margin_fifteen"
-            android:src="@mipmap/right1" />
-    </LinearLayout>
-
-    <View style="@style/line_all" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_forty"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="日本女歌手"
-            android:textColor="@color/black_normal_most" />
-
-        <LinearLayout
-            android:layout_width="@dimen/zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"></LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="@dimen/activity_margin_fifteen"
-            android:src="@mipmap/right1" />
-    </LinearLayout>
-
-    <View style="@style/line_all" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_forty"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="日本组合"
-            android:textColor="@color/black_normal_most" />
-
-        <LinearLayout
-            android:layout_width="@dimen/zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"></LinearLayout>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="@dimen/activity_margin_fifteen"
-            android:src="@mipmap/right1" />
-    </LinearLayout>
-
-    <View style="@style/line_all" />
-
-    <View style="@style/line_all" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_forty"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/activity_margin_fifteen"
-            android:text="其他歌手"
+            android:text="@string/other_dinger"
             android:textColor="@color/black_normal_most" />
 
         <LinearLayout

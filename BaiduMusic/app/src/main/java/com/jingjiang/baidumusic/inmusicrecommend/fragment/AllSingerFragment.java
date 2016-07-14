@@ -16,6 +16,12 @@ public class AllSingerFragment extends BaseFragment implements View.OnClickListe
     private TextView moreTv;
     private OnFragmentSkipListener onFragmentSkipListener;
     private LinearLayout returnLl;
+    private int[] ids = {R.id.music_recommend_allsinger_more_china_man_ll, R.id.music_recommend_allsinger_more_china_women_ll, R.id.music_recommend_allsinger_more_china_club_ll,
+            R.id.music_recommend_allsinger_more_europe_man_ll, R.id.music_recommend_allsinger_more_europe_women_ll, R.id.music_recommend_allsinger_more_europe_club_ll,
+            R.id.music_recommend_allsinger_more_korea_man_ll, R.id.music_recommend_allsinger_more_korea_women_ll, R.id.music_recommend_allsinger_more_korea_club_ll,
+            R.id.music_recommend_allsinger_more_japan_man_ll, R.id.music_recommend_allsinger_more_japan_women_ll, R.id.music_recommend_allsinger_more_japan_club_ll,
+            R.id.music_recommend_allsinger_more_other_ll,};
+
 
     @Override
     public void onAttach(Context context) {
@@ -38,6 +44,9 @@ public class AllSingerFragment extends BaseFragment implements View.OnClickListe
         returnLl = bindView(R.id.music_recommend_allsinger_fanhui_ll);
         returnLl.setOnClickListener(this);
         moreTv.setOnClickListener(this);
+        for (int i = 0; i < ids.length; i++) {
+            bindView(ids[i]).setOnClickListener(this);
+        }
 
 
     }
@@ -57,6 +66,11 @@ public class AllSingerFragment extends BaseFragment implements View.OnClickListe
                 break;
             case R.id.music_recommend_allsinger_fanhui_ll:
                 getFragmentManager().popBackStack();
+                break;
+            case R.id.music_recommend_allsinger_more_china_man_ll:
+                if (onFragmentSkipListener != null) {
+                    onFragmentSkipListener.toSkipFragment(12);//打开歌手地区歌手详情
+                }
                 break;
         }
     }

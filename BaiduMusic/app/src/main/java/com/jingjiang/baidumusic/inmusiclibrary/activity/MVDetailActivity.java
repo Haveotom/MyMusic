@@ -40,7 +40,7 @@ public class MVDetailActivity extends BaseActivity {
         String url = intent.getStringExtra("MV");
         String name = intent.getStringExtra("NAME");
         Log.d("MVDetailActivity", url);
-        Log.d("MVDetailActivity", name+"");
+        Log.d("MVDetailActivity", name + "");
         songTv.setText(name);
         videoView.start(url);
 
@@ -52,12 +52,12 @@ public class MVDetailActivity extends BaseActivity {
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(Configuration newConfig) {//结构,外形
         super.onConfigurationChanged(newConfig);
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {//横向
             videoView.setFullScreen();
         } else {
-            videoView.setFullScreen();
+            videoView.setNormalScreen();
         }
 
     }

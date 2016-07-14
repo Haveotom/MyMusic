@@ -9,7 +9,7 @@ import com.jingjiang.baidumusic.adapter.LiveAdapter;
 import com.jingjiang.baidumusic.base.BaseFragment;
 import com.jingjiang.baidumusic.bean.LiveHotData;
 import com.jingjiang.baidumusic.widget.view.MyGridView;
-import com.jingjiang.baidumusic.widget.UrlTool;
+import com.jingjiang.baidumusic.widget.othertool.UrlTool;
 import com.jingjiang.baidumusic.widget.single.VolleySingle;
 
 /**

@@ -26,7 +26,6 @@
             android:id="@+id/item_individual_use_name_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="name"
             android:textColor="@color/black_normal_most" />
 
         <TextView
@@ -35,7 +34,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_three_dp"
             android:maxLines="3"
-            android:text="jieshao"
             android:textColor="@color/black_normal_least"
             android:textSize="@dimen/textsize_ten_sp" />
 

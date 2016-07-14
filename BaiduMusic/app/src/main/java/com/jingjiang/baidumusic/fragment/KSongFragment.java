@@ -22,13 +22,15 @@ import com.jingjiang.baidumusic.base.BaseFragment;
 import com.jingjiang.baidumusic.bean.KSongAllSingData;
 import com.jingjiang.baidumusic.bean.KSongPlayData;
 import com.jingjiang.baidumusic.inksong.ResumeDetailFragment;
+import com.jingjiang.baidumusic.widget.threadpool.MyThreadPool;
 import com.jingjiang.baidumusic.widget.view.NoScrollListView;
 import com.jingjiang.baidumusic.widget.myinterface.OnDrawerListener;
 import com.jingjiang.baidumusic.widget.myinterface.OnViewPagerClickListener;
-import com.jingjiang.baidumusic.widget.UrlTool;
+import com.jingjiang.baidumusic.widget.othertool.UrlTool;
 import com.jingjiang.baidumusic.widget.single.VolleySingle;
 
 import java.util.ArrayList;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * Created by dllo on 16/6/21.
@@ -148,7 +150,8 @@ public class KSongFragment extends BaseFragment implements View.OnClickListener 
             }
         });
         //开启线程去执行轮播
-        new Thread(new Runnable() {
+        ThreadPoolExecutor threadPool = MyThreadPool.getOurInstance().getThreadPoolExecutor();
+        threadPool.execute(new Runnable() {
             @Override
             public void run() {
                 while (threadAlive) {
@@ -165,8 +168,9 @@ public class KSongFragment extends BaseFragment implements View.OnClickListener 
 
                     }
                 }
+
             }
-        }).start();
+        });
 
         //当用户点击的时候就不会再出发轮播图了
         //轮播图就会暂停轮播

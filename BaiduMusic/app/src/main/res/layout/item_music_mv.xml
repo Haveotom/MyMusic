@@ -19,7 +19,6 @@
         android:layout_marginTop="@dimen/activity_margin_five"
         android:maxLines="2"
         android:minLines="1"
-        android:text="song"
         android:textColor="@color/black_normal_most"
         android:textSize="@dimen/textsize_twelve" />
 
@@ -31,7 +30,6 @@
         android:layout_marginTop="@dimen/margin_three_dp"
         android:maxLines="2"
         android:minLines="1"
-        android:text="songer"
         android:textColor="@color/black_normal"
         android:textSize="@dimen/textsize_twelve" />
 

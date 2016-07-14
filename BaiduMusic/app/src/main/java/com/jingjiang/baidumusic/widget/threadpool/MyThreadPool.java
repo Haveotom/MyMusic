@@ -69,6 +69,12 @@ public class MyThreadPool {
         threadPoolExecutor = new ThreadPoolExecutor(CPUCores + 1,
                 CPUCores * 2 + 1, 60l, TimeUnit.SECONDS,
                 new LinkedBlockingDeque<Runnable>());
+    }
+
+    //获得线程池对象
+    public ThreadPoolExecutor getThreadPoolExecutor() {
+        return threadPoolExecutor;
+    }
 
 
 //        //使用自定义的线程池
@@ -90,5 +96,4 @@ public class MyThreadPool {
 //        //线程池会放弃现有的工作,立刻关闭
 //        threadPool.shutdownNow();
 
-    }
 }

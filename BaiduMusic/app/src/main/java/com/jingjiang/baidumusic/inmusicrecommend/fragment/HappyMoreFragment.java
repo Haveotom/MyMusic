@@ -17,8 +17,8 @@ import com.jingjiang.baidumusic.base.BaseFragment;
 import com.jingjiang.baidumusic.inmusicrecommend.activity.BecomeAuchorActivity;
 import com.jingjiang.baidumusic.inmusicrecommend.data.HappyMoreData;
 import com.jingjiang.baidumusic.widget.single.VolleySingle;
+import com.squareup.picasso.Picasso;
 
-import it.sephiroth.android.library.picasso.Picasso;
 
 /**
  * Created by dllo on 16/7/5.

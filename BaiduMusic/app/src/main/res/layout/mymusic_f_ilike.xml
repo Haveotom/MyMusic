@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_forty"
+        android:background="@color/blue"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/mymusic_f_like_return_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin_five"
+                android:src="@mipmap/fanhui" />
+
+            <TextView
+                android:id="@+id/mymusic_f_like_return_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mymusic_padding_ten"
+                android:paddingTop="2dp"
+                android:text="@string/i_like_single"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_fifteen" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_fifty">
+
+
+        <RelativeLayout
+            android:id="@+id/activity_individual_login_state_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/activity_individual_login_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/individual_activity_login_frame">
+
+                    <TextView
+                        android:id="@+id/mymusic_f_like_login_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_margin_five"
+                        android:layout_marginRight="@dimen/activity_margin_five"
+                        android:padding="@dimen/activity_margin_five"
+                        android:text="@string/liji_login"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/textsize_twelve" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_eight"
+                    android:text="@string/login_after_song"
+                    android:textColor="@color/black_normal_least"
+                    android:textSize="@dimen/textsize_twelve" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/mymusic_f_like_login_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_fifty_five"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/height_forty"
+                android:layout_height="@dimen/height_forty"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/mymusic_margin_twenty"
+                android:src="@mipmap/login_head" />
+
+            <TextView
+                android:id="@+id/mymusic_f_like_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/activity_margin_fifteen"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/like_song"
+                android:textColor="@color/black_normal_most" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View style="@style/line_all" />
+
+    <ListView
+        android:id="@+id/mymusic_f_like_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"></ListView>
+
+</LinearLayout>

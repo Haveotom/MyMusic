@@ -46,6 +46,7 @@ public class VolleySingle {
         queue.add(request);//将请求添加到队列当中
     }
 
+    //方法的重载
     public <T> void _addRequest(Request<T> request, Object tag) {
         request.setTag(tag);
         queue.add(request);

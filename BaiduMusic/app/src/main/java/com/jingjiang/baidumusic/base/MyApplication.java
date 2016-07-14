@@ -3,6 +3,10 @@ package com.jingjiang.baidumusic.base;
 import android.app.Application;
 import android.content.Context;
 
+import cn.bmob.v3.Bmob;
+
+//import cn.bmob.v3.Bmob;
+
 /**
  * Created by dllo on 16/6/21.
  * 我们自己注册的application
@@ -19,8 +23,13 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //有两种初始化的方法
+        /*       第一种      */
         //this代表当前的环境
         context = this;//赋值为this,context便有值
+        //后面的是注册时的Application ID
+        Bmob.initialize(this, "040416333fbace4cbf32b6c78bf547d5");
+
     }
 
     //对外提供一个方法,这个方法就是让别的类获取自己的context

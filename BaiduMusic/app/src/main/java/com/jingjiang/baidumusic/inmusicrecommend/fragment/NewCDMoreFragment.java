@@ -1,6 +1,7 @@
 package com.jingjiang.baidumusic.inmusicrecommend.fragment;
 
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.android.volley.Response;
@@ -14,7 +15,7 @@ import com.jingjiang.baidumusic.widget.single.VolleySingle;
 /**
  * Created by dllo on 16/7/5.
  */
-public class NewCDMoreFragment extends BaseFragment {
+public class NewCDMoreFragment extends BaseFragment implements AdapterView.OnItemClickListener {
     private GridView gridView;
     private NewCDMoreAdapter newCDMoreAdapter;
 
@@ -53,6 +54,13 @@ public class NewCDMoreFragment extends BaseFragment {
                     }
                 }, NewCDData.class);
         gridView.setAdapter(newCDMoreAdapter);
+
+        gridView.setOnItemClickListener(this);
+
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
     }
 }
